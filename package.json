@@ -1,0 +1,46 @@
+{
+  "name": "eslint-config-htmlacademy",
+  "version": "0.1.0",
+  "description": "ESLint shareable config for the HTML Academy style",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "HTMLAcademy",
+    "HTML Academy",
+    "code",
+    "quality",
+    "style",
+    "lint",
+    "linter",
+    "jscs",
+    "jshint",
+    "jslint",
+    "eslint",
+    "validate",
+    "code style",
+    "strict",
+    "check",
+    "checker",
+    "verify",
+    "enforce",
+    "hint"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/htmlacademy/eslint-config-htmlacademy.git"
+  },
+  "author": "zeckson <evgenii.schepotiev@htmlacademy.org>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/htmlacademy/eslint-config-htmlacademy/issues"
+  },
+  "homepage": "https://github.com/htmlacademy/eslint-config-htmlacademy#readme",
+  "peerDependencies": {
+    "eslint": ">=3.8.1"
+  }
+}
