@@ -8,9 +8,11 @@ module.exports = {
         'no-unexpected-multiline': 'error', // eslint:recommended
         'valid-jsdoc': ['error', {
             requireParamDescription: false,
+            requireReturnDescription: false, //TODO: discuss
             requireReturn: false,
             prefer: {returns: 'return'}
         }],
+        'no-console': 'warn',
 
         // Best Practices
         // http://eslint.org/docs/rules/#best-practices
@@ -26,6 +28,29 @@ module.exports = {
         'no-new-wrappers': 'error',
         'no-throw-literal': 'error', // eslint:recommended
         'no-with': 'error',
+        'consistent-return': 'error',
+        'curly': ['error', "all"],
+        'eqeqeq': 'error',
+        'no-alert': 'error',
+        'no-eval': 'error',
+        'no-fallthrough': 'error',
+        'no-floating-decimal': 'error',
+        'no-implied-eval': 'error',
+        'no-iterator': 'error',
+        'no-labels': 'error', //TODO: discuss
+        'no-lone-blocks': 'error',
+        'no-global-reassign': 'error',
+        'no-new': 'error', //TODO: discuss
+        'no-new-func': 'error',
+        // 'no-octal': 'error', //default
+        'no-octal-escape': 'error',
+        'no-proto': 'error',
+        // 'no-redeclare': 'error', //default
+        'no-return-assign': 'error',
+        'no-script-url': 'error',
+        'no-sequences': 'error',
+        'no-unused-expressions': 'error',
+        'radix': 'error',
 
         // Strict Mode
         // http://eslint.org/docs/rules/#strict-mode
@@ -36,10 +61,18 @@ module.exports = {
         // http://eslint.org/docs/rules/#variables
         // ---------------------------------------
         'no-unused-vars': ['error', {args: 'none'}], // eslint:recommended
+        // 'no-delete-var': 'error', //enabled is eslint:recommended
+        'no-label-var': 'error',
+        'no-shadow': 'error',
+        'no-shadow-restricted-names': 'error',
+        // 'no-undef': 'error', //default
+        'no-undef-init': 'error',
+        'no-undefined': 'error',
 
         // Node.js and CommonJS
         // http://eslint.org/docs/rules/#nodejs-and-commonjs
         // -------------------------------------------------
+        'no-process-exit': 'error', //TODO: discuss
 
         // Stylistic Issues
         // http://eslint.org/docs/rules/#stylistic-issues
@@ -85,6 +118,11 @@ module.exports = {
         'space-before-blocks': 'error',
         'space-before-function-paren': ['error', 'never'],
         'spaced-comment': ['error', 'always'],
-        'unicode-bom': 'warn'
+        'unicode-bom': 'warn',
+        'new-parens': 'error',
+        'no-nested-ternary': 'error',
+        'space-infix-ops': 'error',
+        'space-unary-ops': [2, {words: true, nonwords: false}],
+        'yoda': [2, "never"]
     }
 };
