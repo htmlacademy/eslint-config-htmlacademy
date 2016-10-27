@@ -39,7 +39,7 @@ module.exports = {
         'no-iterator': 'error',
         'no-labels': 'error', //TODO: discuss
         'no-lone-blocks': 'error',
-        'no-global-reassign': 'error',
+        'no-global-assign': 'error',
         'no-new': 'error', //TODO: discuss
         'no-new-func': 'error',
         // 'no-octal': 'error', //default
@@ -89,7 +89,7 @@ module.exports = {
         'eol-last': 'error',
         'func-call-spacing': 'error',
         'key-spacing': 'error',
-        'keyword-spacing': 'off',
+        'keyword-spacing': 'error',
         'linebreak-style': 'error',
         'new-cap': 'error',
         'no-array-constructor': 'error',
