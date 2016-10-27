@@ -70,7 +70,7 @@ module.exports = {
             let: 'never',
             const: 'never'
         }],
-        'padded-blocks': ['error', 'never'],
+        'padded-blocks': ['off', 'never'], //TODO: should we require padded blocks?
         'quote-props': ['error', 'consistent'],
         'quotes': ['error', 'single', {allowTemplateLiterals: true}],
         'require-jsdoc': ['error', {
@@ -85,23 +85,6 @@ module.exports = {
         'space-before-blocks': 'error',
         'space-before-function-paren': ['error', 'never'],
         'spaced-comment': ['error', 'always'],
-        'unicode-bom': 'warn',
-
-        // ECMAScript 6
-        // http://eslint.org/docs/rules/#ecmascript-6
-        // ------------------------------------------
-        'arrow-parens': ['error', 'always'], // TODO(philipwalton): technically arrow
-                                       // parens are optional but recommended.
-                                       // ESLint doesn't support a *consistent*
-                                       // setting so "always" is used.
-        'constructor-super': 'error', // eslint:recommended
-        'generator-star-spacing': ['error', 'after'],
-        'no-new-symbol': 'error', // eslint:recommended
-        'no-this-before-super': 'error',  // eslint:recommended
-        'no-var': 'error',
-        'prefer-rest-params': 'error',
-        'prefer-spread': 'error',
-        'rest-spread-spacing': 'error',
-        'yield-star-spacing': ['error', 'after']
+        'unicode-bom': 'warn'
     }
 };
