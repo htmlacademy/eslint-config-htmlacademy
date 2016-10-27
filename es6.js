@@ -1,4 +1,5 @@
 module.exports = {
+    extends: ['es5'],
     rules: {
         // ECMAScript 6
         // http://eslint.org/docs/rules/#ecmascript-6
