@@ -44,6 +44,8 @@ module.exports = {
         // Stylistic Issues
         // http://eslint.org/docs/rules/#stylistic-issues
         // ----------------------------------------------
+        'indent': ['error', 2, {SwitchCase: 1}], // Indent 2-spaces, in switch-case — 1 space TODO: discuss
+        'block-spacing': ['error', 'always'],
         'array-bracket-spacing': ['error', 'never'],
         'brace-style': 'error',
         'camelcase': 'error',
