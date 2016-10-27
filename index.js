@@ -30,7 +30,7 @@ module.exports = {
         // Strict Mode
         // http://eslint.org/docs/rules/#strict-mode
         // -----------------------------------------
-        'strict': 'error',
+        'strict': ['error', 'global'],
 
         // Variables
         // http://eslint.org/docs/rules/#variables
