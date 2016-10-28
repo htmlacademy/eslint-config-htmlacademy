@@ -122,7 +122,7 @@ module.exports = {
         'new-parens': 'error',
         'no-nested-ternary': 'error',
         'space-infix-ops': 'error',
-        'space-unary-ops': [2, {words: true, nonwords: false}],
-        'yoda': [2, "never"]
+        'space-unary-ops': ['error', {words: true, nonwords: false}],
+        'yoda': ['error', "never"]
     }
 };
