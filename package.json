@@ -3,8 +3,8 @@
   "version": "0.1.2",
   "description": "ESLint shareable config for the HTML Academy style",
   "files": [
-    "eslint-config-es5.js",
-    "eslint-config-es6.js",
+    "es5.js",
+    "es6.js",
     "index.js"
   ],
   "keywords": [

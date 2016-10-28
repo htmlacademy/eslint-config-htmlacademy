@@ -13,6 +13,27 @@ module.exports = {
             prefer: {returns: 'return'}
         }],
         'no-console': 'warn',
+        'no-constant-condition': 'error',
+        'no-control-regex': 'error',
+        'no-debugger': 'error',
+        'no-dupe-keys': 'error',
+        'no-dupe-args': 'error',
+        'no-duplicate-case': 'error',
+        'no-empty': 'error',
+        'no-empty-character-class': 'error',
+        'no-ex-assign': 'error',
+        'no-extra-boolean-cast': 'error',
+        'no-extra-semi': 'error',
+        'no-func-assign': 'error',
+        'no-inner-declarations': ['error', "functions"],
+        'no-invalid-regexp': 'error',
+        'no-unsafe-negation': 'error',
+        'no-obj-calls': 'error',
+        'no-regex-spaces': 'error',
+        'no-sparse-arrays': 'error',
+        'no-unreachable': 'error',
+        'use-isnan': 'error',
+        'valid-typeof': 'error',
 
         // Best Practices
         // http://eslint.org/docs/rules/#best-practices
@@ -42,10 +63,10 @@ module.exports = {
         'no-global-assign': 'error',
         'no-new': 'error', //TODO: discuss
         'no-new-func': 'error',
-        // 'no-octal': 'error', //default
+        'no-octal': 'error', //default
         'no-octal-escape': 'error',
         'no-proto': 'error',
-        // 'no-redeclare': 'error', //default
+        'no-redeclare': 'error', //default
         'no-return-assign': 'error',
         'no-script-url': 'error',
         'no-sequences': 'error',
@@ -61,11 +82,11 @@ module.exports = {
         // http://eslint.org/docs/rules/#variables
         // ---------------------------------------
         'no-unused-vars': ['error', {args: 'none'}], // eslint:recommended
-        // 'no-delete-var': 'error', //enabled is eslint:recommended
+        'no-delete-var': 'error', //eslint:recommended
         'no-label-var': 'error',
         'no-shadow': 'error',
         'no-shadow-restricted-names': 'error',
-        // 'no-undef': 'error', //default
+        'no-undef': 'error', //default
         'no-undef-init': 'error',
         'no-undefined': 'error',
 
