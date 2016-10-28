@@ -127,13 +127,6 @@ module.exports = {
         'padded-blocks': ['off', 'never'], //TODO: should we require padded blocks?
         'quote-props': ['error', 'consistent'],
         'quotes': ['error', 'single', {allowTemplateLiterals: true}],
-        'require-jsdoc': ['error', {
-            require: {
-                FunctionDeclaration: true,
-                MethodDefinition: true,
-                ClassDeclaration: true
-            }
-        }],
         'semi-spacing': 'error',
         'semi': 'error',
         'space-before-blocks': 'error',
