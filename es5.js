@@ -130,7 +130,7 @@ module.exports = {
         'semi-spacing': 'error',
         'semi': 'error',
         'space-before-blocks': 'error',
-        'space-before-function-paren': ['error', 'never'],
+        'space-before-function-paren': ['error', {named: 'never', anonymous: 'always'}], //TODO: dsicuss
         'spaced-comment': ['error', 'always'],
         'unicode-bom': 'warn',
         'new-parens': 'error',
