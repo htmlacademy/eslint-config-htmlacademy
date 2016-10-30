@@ -12,7 +12,7 @@ module.exports = {
             requireReturn: false,
             prefer: {returns: 'return'}
         }],
-        'no-console': 'warn',
+        'no-console': 'error',
         'no-constant-condition': 'error',
         'no-control-regex': 'error',
         'no-debugger': 'error',
