@@ -42,6 +42,6 @@
   },
   "homepage": "https://github.com/htmlacademy/eslint-config-htmlacademy#readme",
   "peerDependencies": {
-    "eslint": ">=3.8.1"
+    "eslint": ">=3.8.0"
   }
 }
