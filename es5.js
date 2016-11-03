@@ -8,7 +8,7 @@ module.exports = {
         'no-unexpected-multiline': 'error', // eslint:recommended
         'valid-jsdoc': ['error', {
             requireParamDescription: false,
-            requireReturnDescription: false, //TODO: discuss
+            requireReturnDescription: false,
             requireReturn: false,
             prefer: {returns: 'return'}
         }],
@@ -58,10 +58,10 @@ module.exports = {
         'no-floating-decimal': 'error',
         'no-implied-eval': 'error',
         'no-iterator': 'error',
-        'no-labels': 'error', //TODO: discuss
+        'no-labels': 'error',
         'no-lone-blocks': 'error',
         'no-global-assign': 'error',
-        'no-new': 'error', //TODO: discuss
+        'no-new': 'error',
         'no-new-func': 'error',
         'no-octal': 'error', //default
         'no-octal-escape': 'error',
@@ -93,7 +93,7 @@ module.exports = {
         // Node.js and CommonJS
         // http://eslint.org/docs/rules/#nodejs-and-commonjs
         // -------------------------------------------------
-        'no-process-exit': 'error', //TODO: discuss
+        'no-process-exit': 'error',
 
         // Stylistic Issues
         // http://eslint.org/docs/rules/#stylistic-issues
@@ -124,13 +124,13 @@ module.exports = {
             let: 'never',
             const: 'never'
         }],
-        'padded-blocks': ['off', 'never'], //TODO: should we require padded blocks?
+        'padded-blocks': ['off', 'never'],
         'quote-props': ['error', 'consistent'],
         'quotes': ['error', 'single', {allowTemplateLiterals: true}],
         'semi-spacing': 'error',
         'semi': 'error',
         'space-before-blocks': 'error',
-        'space-before-function-paren': ['error', {named: 'never', anonymous: 'always'}], //TODO: dsicuss
+        'space-before-function-paren': ['error', {named: 'never', anonymous: 'always'}],
         'spaced-comment': ['error', 'always'],
         'unicode-bom': 'warn',
         'new-parens': 'error',
