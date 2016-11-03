@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-htmlacademy",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "ESLint shareable config for the HTML Academy style",
   "files": [
     "es5.js",
