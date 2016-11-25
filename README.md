@@ -1,4 +1,4 @@
-# eslint-config-htmlacademy
+# eslint-config-htmlacademy [![Build status][travis-image]][travis-url]
 HTML Academy
 > ESLint [shareable config](http://eslint.org/docs/developer-guide/shareable-configs.html) for the [HTML Academy](http://htmlacademy.org) ECMAScript courses
 
@@ -35,3 +35,5 @@ For validating ECMAScript 6 project use `es6` version:
   }
 }
 ```
+[travis-image]: https://travis-ci.org/htmlacademy-javascript/420-superquest.svg?branch=master
+[travis-url]: https://travis-ci.org/htmlacademy-javascript/420-superquest
