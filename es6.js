@@ -18,6 +18,6 @@ module.exports = {
         'rest-spread-spacing': 'error',
         'yield-star-spacing': ['error', 'after'],
 
-        'quotes': ['error', 'backtick']
+        'quotes': ['error', 'backtick'] // https://github.com/htmlacademy/eslint-config-htmlacademy/issues/4
     }
 };
