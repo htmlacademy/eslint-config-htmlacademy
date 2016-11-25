@@ -35,5 +35,5 @@ For validating ECMAScript 6 project use `es6` version:
   }
 }
 ```
-[travis-image]: https://travis-ci.org/htmlacademy-javascript/420-superquest.svg?branch=master
-[travis-url]: https://travis-ci.org/htmlacademy-javascript/420-superquest
+[travis-image]: https://travis-ci.org/htmlacademy/eslint-config-htmlacademy.svg?branch=master
+[travis-url]: https://travis-ci.org/htmlacademy/eslint-config-htmlacademy
