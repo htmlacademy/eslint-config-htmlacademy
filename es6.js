@@ -16,6 +16,8 @@ module.exports = {
         'prefer-rest-params': 'error',
         'prefer-spread': 'error',
         'rest-spread-spacing': 'error',
-        'yield-star-spacing': ['error', 'after']
+        'yield-star-spacing': ['error', 'after'],
+
+        'quotes': ['error', 'backtick']
     }
 };

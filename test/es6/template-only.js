@@ -1,3 +1,2 @@
 const a = `abcde`;
-const b = 'defgh';
-throw new Error(a, b);
+throw new Error(a);
