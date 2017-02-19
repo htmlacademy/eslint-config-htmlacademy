@@ -4,6 +4,8 @@ var fun = function (variable) {
 
 };
 
+fun(function () {});
+
 fun(4, (4 + 5), 7);
 
 var k = 7;
