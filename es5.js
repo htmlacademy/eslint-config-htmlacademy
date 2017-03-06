@@ -42,6 +42,7 @@ module.exports = {
     // --------------------------------------------
 
     'guard-for-in': 'error',
+    'max-nested-callbacks': ['error', {max: 3}],
     'no-caller': 'error',
     'no-extend-native': 'error',
     'no-extra-bind': 'error',
