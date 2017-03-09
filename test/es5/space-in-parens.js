@@ -1,10 +1,11 @@
 'use strict';
 
 var fun = function (variable) {
-
+  return variable;
 };
 
-fun(function () {});
+fun(function () {
+});
 
 fun(4, (4 + 5), 7);
 
