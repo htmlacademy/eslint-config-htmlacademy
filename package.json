@@ -29,7 +29,8 @@
     "hint"
   ],
   "scripts": {
-    "test": "npm link eslint-config-htmlacademy && eslint test/"
+    "test": "npm link eslint-config-htmlacademy && eslint test/",
+    "deploy": "npm run test && npm publish --access public"
   },
   "repository": {
     "type": "git",
