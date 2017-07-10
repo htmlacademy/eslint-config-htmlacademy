@@ -14,9 +14,9 @@ $ npm install --save-dev eslint eslint-config-htmlacademy
 
 Once the `eslint-config-htmlacademy` package is installed, you can use it by specifying `htmlacademy` in the [`extends`](http://eslint.org/docs/user-guide/configuring#extending-configuration-files) section of your [ESLint configuration](http://eslint.org/docs/user-guide/configuring).
 
-For validating ECMAScript 5 project use `es5` version:
+For validating **ECMAScript 5** project use `es5` version:
 
-```js
+```json
 {
   "extends": "htmlacademy/es5",
   "rules": {
@@ -25,10 +25,17 @@ For validating ECMAScript 5 project use `es5` version:
 }
 ```
 
-For validating ECMAScript 6 project use `es6` version:
+For validating **ECMAScript 2015 (ES6)** project use `es6` version:
 
-```js
+```json
 {
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  "env": {
+    "es6": true
+  },
   "extends": "htmlacademy/es6",
   "rules": {
     // Additional rules...

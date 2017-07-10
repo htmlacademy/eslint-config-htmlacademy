@@ -11,7 +11,7 @@ module.exports = {
     'constructor-super': `error`, // eslint:recommended
     'generator-star-spacing': [`error`, `after`],
     'no-new-symbol': `error`, // eslint:recommended
-    'no-this-before-super': `error`,  // eslint:recommended
+    'no-this-before-super': `error`, // eslint:recommended
     'no-var': `error`,
     'prefer-rest-params': `error`,
     'prefer-spread': `error`,
