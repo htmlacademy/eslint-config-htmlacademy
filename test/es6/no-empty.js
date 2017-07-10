@@ -8,6 +8,6 @@ const data = {};
 
 try {
   client.emit(`message`, JSON.stringify(data));
-} catch (ignore) {
+} catch (e) {
   // ignore it
 }
