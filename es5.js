@@ -105,7 +105,7 @@ module.exports = {
       SwitchCase: 1,
       // continuation indent
       VariableDeclarator: 1, // indent is multiplier * indent = 1 * 2
-      MemberExpression: 2, // indent is multiplier * indent = 1 * 2
+      MemberExpression: 2, // indent is multiplier * indent = 2 * 2
       FunctionDeclaration: {parameters: 2},
       FunctionExpression: {parameters: 2},
       CallExpression: {arguments: 2}
