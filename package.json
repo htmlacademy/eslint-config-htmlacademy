@@ -5,6 +5,7 @@
   "files": [
     "es5.js",
     "es6.js",
+    "node.js",
     "index.js"
   ],
   "keywords": [
