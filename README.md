@@ -42,5 +42,24 @@ For validating **ECMAScript 2015 (ES6)** project use `es6` version:
   }
 }
 ```
+For validating **ECMAScript 2015 (ES6)** in **Node.js** environment project use `es6` version:
+
+```json
+{
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  "env": {
+    "es6": true,
+    "browser": false,
+    "node": true
+  },
+  "extends": "htmlacademy/node",
+  "rules": {
+    // Additional rules...
+  }
+}
+```
 [travis-image]: https://travis-ci.org/htmlacademy/eslint-config-htmlacademy.svg?branch=master
 [travis-url]: https://travis-ci.org/htmlacademy/eslint-config-htmlacademy
