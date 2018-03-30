@@ -3,15 +3,15 @@
 // Continuation, aka MemberExpression
 var promise = window.Promise.resolve(true);
 promise.
-    then(function (data) {
-      return data;
-    }).
-    then(function (truthy) {
-      return !truthy;
-    }).
-    catch(function () {
-      return false;
-    });
+  then(function (data) {
+    return data;
+  }).
+  then(function (truthy) {
+    return !truthy;
+  }).
+  catch(function () {
+    return false;
+  });
 
 // Function expression
 var fun = function (first, second) {
