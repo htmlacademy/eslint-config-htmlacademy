@@ -20,6 +20,8 @@ module.exports = {
 
     'object-shorthand': [`error`, `always`, {'avoidQuotes': true}],
 
+    'no-undefined': 'off', // https://github.com/htmlacademy/eslint-config-htmlacademy/issues/36
+
     'quotes': [`error`, `backtick`] // https://github.com/htmlacademy/eslint-config-htmlacademy/issues/4
   }
 };
