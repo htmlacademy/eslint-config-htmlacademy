@@ -91,7 +91,7 @@ module.exports = {
     'no-shadow-restricted-names': 'error',
     'no-undef': 'error', // default
     'no-undef-init': 'error',
-    'no-undefined': 'error',
+    'no-undefined': 'off', // https://github.com/htmlacademy/eslint-config-htmlacademy/issues/36
 
     // Node.js and CommonJS
     // http://eslint.org/docs/rules/#nodejs-and-commonjs
