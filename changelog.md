@@ -1,3 +1,10 @@
+0.5.2 / 2018-04-04
+==================
+
+  * 0.5.2
+  * fixes [#36](https://github.com/htmlacademy/eslint-config-htmlacademy/issues/36)
+  * update tests
+
 0.5.1 / 2018-04-03
 ==================
 
