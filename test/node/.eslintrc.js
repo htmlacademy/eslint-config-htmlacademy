@@ -1,7 +1,7 @@
-const config = require('../../node');
+const config = require(`../../node`);
 config.parserOptions = {
   ecmaVersion: 6,
-  sourceType: 'module'
+  sourceType: `module`
 };
 config.env = {
   'es6': true,
