@@ -61,5 +61,25 @@ For validating **ECMAScript 2015 (ES6)** in **Node.js** environment project use 
   }
 }
 ```
+
+For validating **ECMAScript 2018 (ES9)** project use `es9` version:
+
+```json
+{
+  "parserOptions": {
+    "ecmaVersion": 9,
+    "sourceType": "module"
+  },
+  "env": {
+    "es2017": true,
+    "browser": true,
+    "commonjs": true,
+  },
+  "extends": "htmlacademy/basic",
+  "rules": {
+    // Additional rules...
+  }
+}
+```
 [travis-image]: https://travis-ci.org/htmlacademy/eslint-config-htmlacademy.svg?branch=master
 [travis-url]: https://travis-ci.org/htmlacademy/eslint-config-htmlacademy
