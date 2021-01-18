@@ -1,3 +1,13 @@
+1.0.0 / 2021-01-08
+==================
+
+  * 1.0.0
+  * update eslint to 7.16.0
+  * adds ES9 configuration extending eslint:recommended rules
+  * adds tests for es9 configuration
+  * updates README.md according to new configuration
+  * fixes tests for es5 and es6 configurations
+
 0.6.0 / 2020-09-09
 ==================
 
