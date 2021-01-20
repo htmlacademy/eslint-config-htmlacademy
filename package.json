@@ -1,13 +1,9 @@
 {
   "name": "eslint-config-htmlacademy",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "ESLint shareable config for the HTML Academy style",
   "files": [
-    "basic.js",
-    "es5.js",
-    "es5.5.js",
-    "es6.js",
-    "node.js",
+    "vanilla.js",
     "index.js"
   ],
   "keywords": [
@@ -32,21 +28,21 @@
     "hint"
   ],
   "scripts": {
-    "test": "npm link eslint-config-htmlacademy && eslint test/",
+    "test": "eslint test/",
     "deploy": "npm run test && npm publish --access public"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/htmlacademy/eslint-config-htmlacademy.git"
   },
-  "author": "zeckson <evgenii.schepotiev@htmlacademy.org>",
+  "author": "sashasushko <sashasushko@htmlacademy.ru>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/htmlacademy/eslint-config-htmlacademy/issues"
   },
   "homepage": "https://github.com/htmlacademy/eslint-config-htmlacademy#readme",
   "peerDependencies": {
-    "eslint": ">=7.16.0"
+    "eslint": ">=7 "
   },
   "devDependencies": {
     "eslint": "7.16.0"

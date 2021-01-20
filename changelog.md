@@ -1,3 +1,9 @@
+2.0.0 / 2021-01-20
+==================
+
+  * redesign API
+  * update README.md according to new API design
+
 1.0.0 / 2021-01-08
 ==================
 
