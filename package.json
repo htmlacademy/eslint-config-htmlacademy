@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "ESLint shareable config for the HTML Academy style",
   "files": [
+    "basic.js",
     "es5.js",
     "es5.5.js",
     "es6.js",
