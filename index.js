@@ -1,3 +1,9 @@
 module.exports = {
-    depends: ['htmlacademy/vanilla']
+    depends: [
+        'htmlacademy/es5',
+        'htmlacademy/es5.5',
+        'htmlacademy/es6',
+        'htmlacademy/node',
+        'htmlacademy/vanilla'
+    ]
 };
