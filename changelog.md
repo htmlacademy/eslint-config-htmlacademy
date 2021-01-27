@@ -1,3 +1,8 @@
+2.1.0 / 2021-01-27
+==================
+
+  * returned old configurations for backward compatibility for our inner tools. Please **don't use that configurations in real projects** they are deprecated. 
+
 2.0.0 / 2021-01-20
 ==================
 
