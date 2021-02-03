@@ -20,6 +20,7 @@ module.exports = {
     // ECMAScript 6
     // https://eslint.org/docs/rules/#ecmascript-6
     // ---------------------------------------------
-    'no-var': ['error'],
+    'no-var': 'error',
+    'prefer-const': 'error',
   },
 };
