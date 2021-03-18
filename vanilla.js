@@ -25,5 +25,7 @@ module.exports = {
     'prefer-arrow-callback': 'error',
     'eol-last': 'error',
     'no-multiple-empty-lines': 'error',
+    'semi': 'error',
+    'semi-style': 'error',
   },
 };
