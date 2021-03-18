@@ -24,5 +24,6 @@ module.exports = {
     'prefer-const': 'error',
     'prefer-arrow-callback': 'error',
     'eol-last': 'error',
+    'no-multiple-empty-lines': 'error',
   },
 };
