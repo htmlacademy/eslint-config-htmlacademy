@@ -27,5 +27,6 @@ module.exports = {
     'no-multiple-empty-lines': 'error',
     'semi': 'error',
     'semi-style': 'error',
+    'no-trailing-spaces': 'error',
   },
 };
