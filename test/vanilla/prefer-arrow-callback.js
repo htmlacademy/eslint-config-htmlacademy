@@ -1,7 +1,7 @@
 const func0 = (fun) => fun();
 
 // arrow function callback
-func0(a => a);
+func0((a) => a);
 
 func0((a) => {
   return a;

@@ -28,5 +28,6 @@ module.exports = {
     'semi': 'error',
     'semi-style': 'error',
     'no-trailing-spaces': 'error',
+    'arrow-parens': 'error',
   },
 };
