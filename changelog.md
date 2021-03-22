@@ -1,3 +1,15 @@
+3.0.0 / 2021-03-22
+==================
+
+  * enable rules:
+  * `prefer-arrow-callback`
+  * `eol-last`
+  * `no-multiple-empty-lines`
+  * `semi`
+  * `semi-style`
+  * `no-trailing-spaces`
+  * `arrow-parens`
+
 2.1.0 / 2021-01-27
 ==================
 

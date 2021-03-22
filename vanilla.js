@@ -22,5 +22,12 @@ module.exports = {
     // ---------------------------------------------
     'no-var': 'error',
     'prefer-const': 'error',
+    'prefer-arrow-callback': 'error',
+    'eol-last': 'error',
+    'no-multiple-empty-lines': 'error',
+    'semi': 'error',
+    'semi-style': 'error',
+    'no-trailing-spaces': 'error',
+    'arrow-parens': 'error',
   },
 };

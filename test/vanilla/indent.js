@@ -3,13 +3,13 @@
 // Continuation, aka MemberExpression
 const promise = window.Promise.resolve(true);
 promise.
-  then(function (data) {
+  then((data) => {
     return data;
   }).
-  then(function (truthy) {
+  then((truthy) => {
     return !truthy;
   }).
-  catch(function () {
+  catch(() => {
     return false;
   });
 
