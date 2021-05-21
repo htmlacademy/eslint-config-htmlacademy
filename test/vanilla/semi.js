@@ -1,16 +1,16 @@
-const a = 'a';
+const letter = 'a';
 
-const func0 = () => { return; };
+const doSomething = () => {};
 
-const func1 = (a) => a;
+const doSomethingElse = (template) => template;
 
-const func2 = () => { func0(); };
+const checkEnything = () => { doSomething(); };
 
-const func3 = () => { func0(); func1(); };
+const checkEnythingInline = () => { doSomething(); doSomethingElse(); };
 
-const func4 = () => {
-  func0();
-  func1();
+const checkEnythingMultiline = () => {
+  doSomething();
+  doSomethingElse();
 };
 
-throw new Error (a, func0, func1, func2, func3, func4);
+throw new Error (letter, checkEnything, checkEnythingInline, checkEnythingMultiline);

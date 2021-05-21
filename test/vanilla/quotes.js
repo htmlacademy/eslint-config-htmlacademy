@@ -1,6 +1,6 @@
-const a = 'Anything string';
-const b = `Anything
+const template = 'Anything string';
+const templateLiteralMultiline = `Anything
 string`;
-const c = `This's a ${a}`;
+const templateLiteralInline = `This's a ${template}`;
 
-throw new Error(a, b, c);
+throw new Error(template, templateLiteralMultiline, templateLiteralInline);

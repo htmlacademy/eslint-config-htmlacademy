@@ -1,21 +1,23 @@
-const a = '';
-
 () => {};
 
-(a) => {return a;};
+(anything) => anything;
 
-(a) => a;
-
-(a) => {
-  return `${a} \n`;
+(anything) => {
+  anything++;
+  return anything;
 };
 
-a.then((foo) => {
-  return foo;
+(anything) => `${anything} \n`;
+
+const emptyString = '';
+
+emptyString.then((anything) => {
+  anything = `${anything}!`;
+  return anything;
 });
 
-a.then((foo) => {
-  if (foo === true) {
-    return foo;
+emptyString.then((anything) => {
+  if (typeof anything === 'string') {
+    return anything;
   }
 });

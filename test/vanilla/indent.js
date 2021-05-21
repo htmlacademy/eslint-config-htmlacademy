@@ -1,48 +1,40 @@
-'use strict';
-
 // Continuation, aka MemberExpression
 const promise = window.Promise.resolve(true);
 promise.
-  then((data) => {
-    return data;
-  }).
-  then((truthy) => {
-    return !truthy;
-  }).
-  catch(() => {
-    return false;
-  });
+  then((data) => data).
+  then((truthy) => !truthy).
+  catch(() => false);
 
 // Function expression
-const fun = function (first, second) {
-  return first + second;
+const calculateSum = function (sum, price) {
+  return sum + price;
 };
 
 // Function declaration
-function Constructor(first, second) {
+function Constructor(name, price) {
   this.data = {
-    first: first,
-    second: second,
+    name: name,
+    price: price,
   };
 }
 
 // Calling site arguments
-const myObject = new Constructor(
+const objectSample = new Constructor(
   'Petya',
   'Vasya',
 );
-myObject.toString();
+objectSample.toString();
 
-const result = fun(
-  'one',
-  'two',
+const result = calculateSum(
+  10000,
+  1000,
 );
 result.toString();
 
 // Switch
-const a = 'a';
+const symbol = 'a';
 
-switch(a) {
+switch(symbol) {
   case 'a':
     break;
   case 'b':
