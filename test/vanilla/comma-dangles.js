@@ -1,29 +1,27 @@
-const arr0 = ['a', 'b', 'c'];
-const arr1 = [
+const characters = ['a', 'b', 'c'];
+const letters = [
   'a',
   'b',
   'c',
 ];
 
-const obj0 = {q: 'q', w: 'w'};
-const obj1 = {
-  q: 'q',
-  w: 'w',
+const category = {id: 0, name: 'office'};
+const product = {
+  id: 0,
+  categoryId: 0,
+  name: 'table',
 };
 
-const func0 = (a, b) => {
-  return a + b;
-};
-const func1 = (
-  a,
-  b,
-) => {
-  return a + b;
-};
+const matchesCategory = (categoryItem, productItem) => categoryItem.id === productItem.categoryId;
 
-func0(
-  obj0.a,
-  obj0.b,
+const includesPattern = (
+  productName,
+  pattern,
+) => (typeof productName === 'string' && productName.includes(pattern));
+
+matchesCategory(
+  category,
+  product,
 );
 
-throw new Error(arr0, arr1, obj0, obj1, func0, func1);
+throw new Error(characters, letters, includesPattern);

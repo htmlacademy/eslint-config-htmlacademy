@@ -1,38 +1,34 @@
-const func0 = (fun) => fun();
+const doEnything = (fun) => fun();
 
 // arrow function callback
-func0((a) => a);
-
-func0((a) => {
-  return a;
-});
+doEnything(() => {});
 
 // generator as callback
-func0(function*() { yield; });
+doEnything(function*() { yield; });
 
 // function expression not used as callback or function argument
-const func1 = function foo(a) {
-  return a;
+const doEnythingUsefull = function foo(value) {
+  return value;
 };
 
 // recursive named function callback
-func0(function bar(n) {
-  return n && n + bar(n - 1);
+doEnything(function doEnythingElse(value) {
+  return value && value + doEnythingElse(value - 1);
 });
 
 // Default: { allowNamedFunctions: false, allowUnboundThis: true }
 // 'allowUnboundThis': true, gives access to use next espressions
 
 // unbound function expression callback
-func0(function() {
-  return this.a;
+doEnything(function() {
+  return this.key;
 });
 
-func0(function() {
-  this.a;
+doEnything(function() {
+  this.key;
 });
 
-func0(function() {
+doEnything(function() {
   (() => this);
 });
 
@@ -42,4 +38,4 @@ const someObject = {};
   return this.doSomething(item);
 }, someObject);
 
-throw new Error(func0, func1);
+throw new Error(doEnythingUsefull);

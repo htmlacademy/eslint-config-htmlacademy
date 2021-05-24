@@ -1,11 +1,11 @@
-for (const num in [1, 2]) {
-  throw new Error(num);
+for (const number in [1, 2]) {
+  throw new Error(number);
 }
 
-for (const num of [1, 2]) {
-  throw new Error(num);
+for (const number of [1, 2]) {
+  throw new Error(number);
 }
 
-for (let num = 0, end = 2; num < end; ++num) {
-  throw new Error(num);
+for (let number = 0, end = 2; number < end; ++number) {
+  throw new Error(number);
 }

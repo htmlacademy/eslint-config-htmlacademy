@@ -1,6 +1,6 @@
-let a = 0;
-a = 1;
+let number = 0;
+number = 1;
 
-const B = 'B';
+const letter = 'B';
 
-throw new Error (a, B);
+throw new Error (number, letter);
