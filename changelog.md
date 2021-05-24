@@ -1,3 +1,38 @@
+4.0.0 / 2021-05-24
+==================
+
+  * add new rules for Vanila JS:
+  * `no-template-curly-in-string`
+  * `accessor-pairs`
+  * `curly`
+  * `eqeqeq`
+  * `no-alert`
+  * `no-useless-concat`
+  * `no-useless-return`
+  * `radix`
+  * `strict`
+  * `no-shadow`
+  * `no-use-before-define`
+  * `camelcase`
+  * `id-length`
+  * `lines-between-class-members`
+  * `no-nested-ternary`
+  * `no-unneeded-ternary`
+  * `arrow-body-style`
+  * `prefer-template`
+
+  * add configuration for projects that use react and add the following rules:
+  * `react/no-access-state-in-setstate`
+  * `react/no-array-index-key`
+  * `react/no-unused-prop-types`
+  * `react/jsx-boolean-value`
+  * `react/jsx-closing-bracket-location`
+  * `react/jsx-closing-tag-location`
+  * `react/jsx-curly-newline`
+  * `react/jsx-no-useless-fragment`
+  * `react/function-component-definition`
+  * `react/jsx-wrap-multilines`
+
 3.0.0 / 2021-03-22
 ==================
 
