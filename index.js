@@ -4,6 +4,7 @@ module.exports = {
         'htmlacademy/es5.5',
         'htmlacademy/es6',
         'htmlacademy/node',
-        'htmlacademy/vanilla'
+        'htmlacademy/vanilla',
+        'htmlacademy/react',
     ]
 };

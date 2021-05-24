@@ -8,6 +8,7 @@
     "es6.js",
     "node.js",
     "vanilla.js",
+    "react.js",
     "index.js"
   ],
   "keywords": [
@@ -50,5 +51,8 @@
   },
   "devDependencies": {
     "eslint": "7.16.0"
+  },
+  "dependencies": {
+    "eslint-plugin-react": "^7.23.2"
   }
 }
