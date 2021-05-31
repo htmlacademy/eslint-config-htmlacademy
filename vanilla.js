@@ -32,7 +32,6 @@ module.exports = {
       'functions': 'always-multiline',
     }],
     'eol-last': 'error',
-    'id-length': 'error',
     'indent': ['error', 2, {
       SwitchCase: 1,
     }],

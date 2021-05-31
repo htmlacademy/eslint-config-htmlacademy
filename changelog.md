@@ -1,3 +1,8 @@
+4.0.1 / 2021-05-31
+==================
+
+  * remove rule `id-length` for Vanila JS, because it contraries to our criteria
+
 4.0.0 / 2021-05-24
 ==================
 
