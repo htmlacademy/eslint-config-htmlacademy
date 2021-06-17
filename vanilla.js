@@ -21,7 +21,7 @@ module.exports = {
     // Variables
     // https://eslint.org/docs/rules/#variables
     'no-shadow': ['error', {'hoist': 'all'}],
-    'no-use-before-define': 'error',
+    'no-use-before-define': ['error', {'functions': false}],
     // Stylistic Issues
     // https://eslint.org/docs/rules/#stylistic-issues
     // ---------------------------------------------
