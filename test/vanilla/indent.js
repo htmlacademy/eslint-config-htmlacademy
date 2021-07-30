@@ -34,7 +34,7 @@ result.toString();
 // Switch
 const symbol = 'a';
 
-switch(symbol) {
+switch (symbol) {
   case 'a':
     break;
   case 'b':
