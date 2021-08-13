@@ -1,0 +1,10 @@
+addReviewers: true
+
+addAssignees: author
+
+reviewers:
+  - AntonovIgor
+  - sashasushko
+  - kam4atka
+
+numberOfReviewers: 0
