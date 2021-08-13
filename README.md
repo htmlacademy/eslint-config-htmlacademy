@@ -1,15 +1,14 @@
-# eslint-config-htmlacademy [![Build status][travis-image]][travis-url]
+# eslint-config-htmlacademy
 
 ESLint [shareable config](http://eslint.org/docs/developer-guide/shareable-configs.html) for the [HTML Academy](http://htmlacademy.ru) courses
 
 ## Installation
 
-```
-$ npm install --save-dev eslint-config-htmlacademy
+```bash
+npm install --save-dev eslint-config-htmlacademy
 ```
 
 Package requires `eslint`. You must install it manually.
-
 
 ## Usage
 
@@ -56,6 +55,3 @@ For validating **React** project use `react` version (`htmlacademy/react` includ
 Caution! `htmlacademy/react` doesn't include `react-hooks/rules-of-hooks` and `react-hooks/exhaustive-deps` because in our courses we use CRA (Create React App) which includes these plugins out of box. Install them yourself if necessary.
 
 **Node.js** versions soon.
-
-[travis-image]: https://travis-ci.org/htmlacademy/eslint-config-htmlacademy.svg?branch=master
-[travis-url]: https://travis-ci.org/htmlacademy/eslint-config-htmlacademy
