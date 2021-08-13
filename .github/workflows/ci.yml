@@ -5,7 +5,7 @@ on: [push, pull_request]
 jobs: 
   test: 
     - 
-      name: Test code
+      name: "Test code"
     - 
       runs-on: ubuntu-latest
     - 
