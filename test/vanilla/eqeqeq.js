@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-expressions */
+
 const conditionLeft = 'str';
 const conditionRight = 'str';
 
