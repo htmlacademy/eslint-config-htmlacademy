@@ -28,11 +28,6 @@ module.exports = {
     // https://eslint.org/docs/rules/#stylistic-issues
     // ---------------------------------------------
     'camelcase': 'error',
-    'comma-dangle': ['error', {
-      'arrays': 'always-multiline',
-      'objects': 'always-multiline',
-      'functions': 'always-multiline',
-    }],
     'eol-last': 'error',
     'indent': ['error', 2, {
       SwitchCase: 1,
