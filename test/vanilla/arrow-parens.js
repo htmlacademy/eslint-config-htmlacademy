@@ -1,13 +1,13 @@
-() => {};
+const fn1 = () => {};
 
-(anything) => anything;
+const fn2 = (anything) => anything;
 
-(anything) => {
+const fn3 = (anything) => {
   anything++;
   return anything;
 };
 
-(anything) => `${anything} \n`;
+const fn4 = (anything) => `${anything} \n`;
 
 const emptyString = '';
 
@@ -21,3 +21,5 @@ emptyString.then((anything) => {
     return anything;
   }
 });
+
+throw new Error(fn1, fn2, fn3, fn4);
