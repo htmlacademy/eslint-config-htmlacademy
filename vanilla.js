@@ -15,6 +15,7 @@ module.exports = {
     'no-useless-concat': 'error',
     'no-useless-return': 'error',
     'no-unused-expressions': 'error',
+    'no-return-assign': 'error',
     'radix': 'error',
     // Strict Mode
     // https://eslint.org/docs/rules/#strict-mode
