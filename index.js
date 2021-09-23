@@ -6,5 +6,6 @@ module.exports = {
         'htmlacademy/node',
         'htmlacademy/vanilla',
         'htmlacademy/react',
+        'htmlacademy/react-typescript',
     ]
 };

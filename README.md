@@ -52,6 +52,25 @@ For validating **React** project use `react` version (`htmlacademy/react` includ
 }
 ```
 
-Caution! `htmlacademy/react` doesn't include `react-hooks/rules-of-hooks` and `react-hooks/exhaustive-deps` because in our courses we use CRA (Create React App) which includes these plugins out of box. Install them yourself if necessary.
+For validating **React** project with TypeScript use `react-typescript` version (`htmlacademy/react-typescript` includes `react/recommended` and `@typescript-eslint/recommended`):
+
+```json
+{
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "env": {
+    "es2017": true,
+    "browser": true
+  },
+  "extends": "htmlacademy/react-typescript",
+  "rules": {
+    // Additional rules...
+  }
+}
+```
+
+Caution! `htmlacademy/react` and `htmlacademy/react-typescript` doesn't include `react-hooks/rules-of-hooks` and `react-hooks/exhaustive-deps` because in our courses we use CRA (Create React App) which includes these plugins out of box. Install them yourself if necessary.
 
 **Node.js** versions soon.
