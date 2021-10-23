@@ -13,6 +13,7 @@ module.exports = {
       'no-new-symbol': `error`, // eslint:recommended
       'no-this-before-super': `error`, // eslint:recommended
       'no-var': `error`,
+      'prefer-const': `error`,
       'prefer-rest-params': `error`,
       'prefer-spread': `error`,
       'rest-spread-spacing': `error`,
