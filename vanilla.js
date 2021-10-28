@@ -32,7 +32,7 @@ module.exports = {
     'indent': ['error', 2, {
       SwitchCase: 1,
     }],
-    'lines-between-class-members': ['error', 'always'],
+    'lines-between-class-members': ['error', 'always', {'exceptAfterSingleLine': true}],
     'no-multiple-empty-lines': 'error',
     'no-nested-ternary': 'error',
     'no-trailing-spaces': 'error',
