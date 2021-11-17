@@ -19,7 +19,7 @@ For validating **Vanilla JS** project use `vanilla` version:
 ```json
 {
   "parserOptions": {
-    "ecmaVersion": 2018,
+    "ecmaVersion": 2019,
     "sourceType": "module"
   },
   "env": {
@@ -38,7 +38,7 @@ For validating **React** project use `react` version (`htmlacademy/react` includ
 ```json
 {
   "parserOptions": {
-    "ecmaVersion": 2018,
+    "ecmaVersion": 2019,
     "sourceType": "module"
   },
   "env": {

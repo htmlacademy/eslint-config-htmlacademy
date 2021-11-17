@@ -25,11 +25,11 @@ doEnything(function() {
 });
 
 doEnything(function() {
-  this.key;
+  doEnything(this.key);
 });
 
 doEnything(function() {
-  (() => this);
+  (() => this)();
 });
 
 const someObject = {};

@@ -14,6 +14,8 @@ module.exports = {
     'no-alert': 'error',
     'no-useless-concat': 'error',
     'no-useless-return': 'error',
+    'no-unused-expressions': 'error',
+    'no-return-assign': 'error',
     'radix': 'error',
     // Strict Mode
     // https://eslint.org/docs/rules/#strict-mode
@@ -26,16 +28,11 @@ module.exports = {
     // https://eslint.org/docs/rules/#stylistic-issues
     // ---------------------------------------------
     'camelcase': 'error',
-    'comma-dangle': ['error', {
-      'arrays': 'always-multiline',
-      'objects': 'always-multiline',
-      'functions': 'always-multiline',
-    }],
     'eol-last': 'error',
     'indent': ['error', 2, {
       SwitchCase: 1,
     }],
-    'lines-between-class-members': ['error', 'always'],
+    'lines-between-class-members': ['error', 'always', {'exceptAfterSingleLine': true}],
     'no-multiple-empty-lines': 'error',
     'no-nested-ternary': 'error',
     'no-trailing-spaces': 'error',
