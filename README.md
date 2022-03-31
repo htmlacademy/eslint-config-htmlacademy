@@ -99,7 +99,10 @@ $ npm i --save-dev @typescript-eslint/eslint-plugin
   },
   "parser": "@typescript-eslint/parser",
   "plugins": "@typescript-eslint",
-  "extends": "htmlacademy/node"
+  "extends": "htmlacademy/node",
+  "rules": {
+    // Additional rules...
+  }
 }
 ```
 
