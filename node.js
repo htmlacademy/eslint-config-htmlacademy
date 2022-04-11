@@ -43,5 +43,8 @@ module.exports = {
       'node/prefer-global/url': 'error',
       'node/prefer-promises/dns': 'error',
       'node/prefer-promises/fs': 'error',
+      // Typescript
+      // ------------------------------------------
+      '@typescript-eslint/no-empty-interface': 'off',
     }
   };
