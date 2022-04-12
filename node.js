@@ -47,6 +47,6 @@ module.exports = {
       // Typescript
       // ------------------------------------------
       '@typescript-eslint/no-empty-interface': 'off',      
-      "@typescript-eslint/no-shadow": "error"
+      '@typescript-eslint/no-shadow': 'error'
     }
   };
