@@ -8,7 +8,7 @@ module.exports = {
       // Possible Errors
       // ------------------------------------------
       'no-console': 'off',
-      "no-shadow": "off",
+      'no-shadow': 'off',
       'node/handle-callback-err': ['error', "^.*(e|E)rr"],
       'node/no-callback-literal': 'error',
       'node/no-exports-assign': 'off',
