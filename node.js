@@ -8,6 +8,7 @@ module.exports = {
       // Possible Errors
       // ------------------------------------------
       'no-console': 'off',
+      'no-shadow': 'off',
       'node/handle-callback-err': ['error', "^.*(e|E)rr"],
       'node/no-callback-literal': 'error',
       'node/no-exports-assign': 'off',
@@ -45,6 +46,7 @@ module.exports = {
       'node/prefer-promises/fs': 'error',
       // Typescript
       // ------------------------------------------
-      '@typescript-eslint/no-empty-interface': 'off',
+      '@typescript-eslint/no-empty-interface': 'off',      
+      '@typescript-eslint/no-shadow': 'error'
     }
   };
