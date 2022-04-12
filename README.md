@@ -98,7 +98,7 @@ $ npm i --save-dev @typescript-eslint/eslint-plugin
     "sourceType": "module"
   },
   "parser": "@typescript-eslint/parser",
-  "plugins": "@typescript-eslint",
+  "plugins": ["@typescript-eslint"],
   "extends": "htmlacademy/node",
   "rules": {
     // Additional rules...
