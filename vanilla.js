@@ -38,10 +38,12 @@ module.exports = {
       SwitchCase: 1,
     }],
     'lines-between-class-members': ['error', 'always', {'exceptAfterSingleLine': true}],
+    'no-multi-spaces': 'error',
     'no-multiple-empty-lines': 'error',
     'no-trailing-spaces': 'error',
     'quotes': ['error', 'single'],
     'semi': 'error',
     'semi-style': 'error',
+    'space-infix-ops': 'error'
   },
 };
