@@ -3,7 +3,7 @@ const _textColor = '#112C85';
 const textColor_ = '#112C85';
 const TEXT_COLOR = '#112C85';
 
-const objectSample ={
+const objectSample = {
   key: 'key',
 };
 
