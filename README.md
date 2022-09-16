@@ -52,13 +52,24 @@ For validating **React** project use `react` version (`htmlacademy/react` includ
 }
 ```
 
-For validating **React** project with TypeScript use `react-typescript` version (`htmlacademy/react-typescript` includes `react/recommended` and `@typescript-eslint/recommended`):
+For validating **React** project with TypeScript use `react-typescript` version (`htmlacademy/react-typescript` includes `react/recommended`, `@typescript-eslint/recommended` and `@typescript-eslint/recommended-requiring-type-checking`).
+
+Before using `eslint-config-htmlacademy` make sure you have TypeScript, `@typescript-eslint/parser`, `@typescript-eslint/eslint-plugin` installed:
+
+```bash
+$ npm i --save-dev typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin
+```
 
 ```json
 {
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
   "parserOptions": {
     "ecmaVersion": 2018,
-    "sourceType": "module"
+    "sourceType": "module",
+    "project": [
+      "tsconfig.json" // path to your tsconfig file
+    ]
   },
   "env": {
     "es2017": true,
@@ -72,6 +83,24 @@ For validating **React** project with TypeScript use `react-typescript` version 
 ```
 
 Caution! `htmlacademy/react` and `htmlacademy/react-typescript` doesn't include `react-hooks/rules-of-hooks` and `react-hooks/exhaustive-deps` because in our courses we use CRA (Create React App) which includes these plugins out of box. Install them yourself if necessary.
+
+Caution! If you're wanting to use `toBeCalled` and similar matches in jest tests, you can use next option for `eslintConfig`:
+
+```json
+"eslintConfig": {
+  "overrides": [
+    {
+      "files": ["*test*"], // regExp to answer the question "How to find your tests?"
+      "rules": {
+        "@typescript-eslint/unbound-method": "off",
+        "jest/unbound-method": "error"
+      }
+    }
+  ]
+}
+```
+
+Why this is necessary, you can read on the [next page](https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/unbound-method.md).
 
 For validating **Node** project use `node` version (`htmlacademy/node` includes `htmlacademy/vanilla`, `plugin:@typescript-eslint/recommended` and `plugin:node/recommended`).
 
