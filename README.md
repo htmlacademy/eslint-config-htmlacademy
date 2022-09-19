@@ -65,7 +65,7 @@ $ npm i --save-dev typescript @typescript-eslint/parser @typescript-eslint/eslin
   "parser": "@typescript-eslint/parser",
   "plugins": ["@typescript-eslint"],
   "parserOptions": {
-    "ecmaVersion": 2018,
+    "ecmaVersion": 2020,
     "sourceType": "module",
     "project": [
       "tsconfig.json" // path to your tsconfig file
