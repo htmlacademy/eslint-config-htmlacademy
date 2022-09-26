@@ -1,3 +1,13 @@
+7.0.0 / 2022-09-26
+==================
+
+  * Добавили набор правил `recommended-requiring-type-checking` плагина `plugin:@typescript-eslint`
+  * Добавили правила в конфигурационном файле react-typescript
+    * `@typescript-eslint/member-delimiter-style`
+    * `@typescript-eslint/no-useless-empty-export`
+  * Отключили правило в конфигурционном файле react-typescript
+    * `@typescript-eslint/no-floating-promises`
+
 6.0.0 / 2022-06-20
 ==================
 
