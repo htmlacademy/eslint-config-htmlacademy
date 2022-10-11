@@ -15,6 +15,7 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': ['error'],
     '@typescript-eslint/member-delimiter-style': ['error'],
     '@typescript-eslint/no-useless-empty-export': 'warn',
-    '@typescript-eslint/no-floating-promises': 'off'
+    '@typescript-eslint/no-floating-promises': 'off',
+    '@typescript-eslint/no-explicit-any': 'error'
   }
 }
