@@ -4,9 +4,13 @@ const doSomething = () => {};
 
 const doSomethingElse = (template) => template;
 
-const checkEnything = () => { doSomething(); };
+const checkEnything = () => {
+  doSomething();
+};
 
-const checkEnythingInline = () => { doSomething(); doSomethingElse(); };
+const checkEnythingInline = () => {
+  doSomething(); doSomethingElse();
+};
 
 const checkEnythingMultiline = () => {
   doSomething();

@@ -4,7 +4,9 @@ const doEnything = (fun) => fun();
 doEnything(() => {});
 
 // generator as callback
-doEnything(function*() { yield; });
+doEnything(function*() {
+  yield;
+});
 
 // function expression not used as callback or function argument
 const doEnythingUsefull = function foo(value) {
