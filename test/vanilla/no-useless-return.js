@@ -4,7 +4,9 @@ const doSomething = () => {};
 const doSomethingElse = () => {};
 const doDefault = () => {};
 
-function getNumberFive() { return 5; }
+function getNumberFive() {
+  return 5;
+}
 
 function getFunction() {
   return () => {};

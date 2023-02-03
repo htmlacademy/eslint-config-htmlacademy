@@ -44,6 +44,8 @@ module.exports = {
     'quotes': ['error', 'single'],
     'semi': 'error',
     'semi-style': 'error',
-    'space-infix-ops': 'error'
+    'space-infix-ops': 'error',
+    'brace-style': ['error'],
+    'space-in-parens': ['error']
   },
 };
