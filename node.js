@@ -4,6 +4,9 @@ module.exports = {
       'plugin:@typescript-eslint/recommended',
       'plugin:node/recommended',
     ],
+    plugins: [
+      'unicorn'
+    ],
     rules: {
       // Possible Errors
       // ------------------------------------------
@@ -44,6 +47,7 @@ module.exports = {
       'node/prefer-global/url': 'error',
       'node/prefer-promises/dns': 'error',
       'node/prefer-promises/fs': 'error',
+      'unicorn/prefer-node-protocol': 'warn',
       // Typescript
       // ------------------------------------------
       '@typescript-eslint/no-empty-interface': 'off',      
