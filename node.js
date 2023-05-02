@@ -12,6 +12,7 @@ module.exports = {
       // ------------------------------------------
       'no-console': 'off',
       'no-shadow': 'off',
+      'no-unused-vars': 'off',
       'node/handle-callback-err': ['error', "^.*(e|E)rr"],
       'node/no-callback-literal': 'error',
       'node/no-exports-assign': 'off',
@@ -50,7 +51,8 @@ module.exports = {
       'unicorn/prefer-node-protocol': 'warn',
       // Typescript
       // ------------------------------------------
-      '@typescript-eslint/no-empty-interface': 'off',      
-      '@typescript-eslint/no-shadow': 'error'
+      '@typescript-eslint/no-empty-interface': 'off',
+      '@typescript-eslint/no-shadow': 'error',
+      '@typescript-eslint/no-unused-vars': ['warn', {'argsIgnorePattern': '^_'}]
     }
   };
