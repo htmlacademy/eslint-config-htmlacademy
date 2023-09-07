@@ -1,3 +1,12 @@
+10.0.0 / 2023-09-05
+==================
+
+  * Добавили eslint-плагин `check-file`
+  * Добавили правила в конфигурационном файле `vanilla`
+    * `check-file/filename-naming-convention`
+    * `check-file/folder-naming-convention`
+  * Обновили версии `eslint` и ECMAScript
+
 9.1.1 / 2023-05-02
 ==================
 
@@ -133,7 +142,7 @@
 2.1.0 / 2021-01-27
 ==================
 
-  * returned old configurations for backward compatibility for our inner tools. Please **don't use that configurations in real projects** they are deprecated. 
+  * returned old configurations for backward compatibility for our inner tools. Please **don't use that configurations in real projects** they are deprecated.
 
 2.0.0 / 2021-01-20
 ==================

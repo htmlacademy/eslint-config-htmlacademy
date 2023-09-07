@@ -1,5 +1,8 @@
 module.exports = {
   extends: 'eslint:recommended',
+  plugins: [
+    'check-file'
+  ],
   rules: {
     // Possible Errors
     // https://eslint.org/docs/rules/#possible-errors
@@ -46,6 +49,8 @@ module.exports = {
     'semi-style': 'error',
     'space-infix-ops': 'error',
     'brace-style': ['error'],
-    'space-in-parens': ['error']
+    'space-in-parens': ['error'],
+    'check-file/filename-naming-convention': ['error', {'**/*.{jsx,tsx,js,ts}': 'KEBAB_CASE'}],
+    'check-file/folder-naming-convention': ['error', {'**/': 'KEBAB_CASE'}],
   },
 };

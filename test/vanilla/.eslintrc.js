@@ -2,12 +2,12 @@
 const config = require('../../vanilla');
 
 config.parserOptions = {
-  ecmaVersion: 2019,
+  ecmaVersion: 2023,
   sourceType: 'module',
 };
 
 config.env = {
-  'es2017': true,
+  'es2023': true,
   'browser': true,
 };
 

@@ -19,11 +19,11 @@ For validating **Vanilla JS** project use `vanilla` version:
 ```json
 {
   "parserOptions": {
-    "ecmaVersion": 2019,
+    "ecmaVersion": 2023,
     "sourceType": "module"
   },
   "env": {
-    "es2017": true,
+    "es2023": true,
     "browser": true
   },
   "extends": "htmlacademy/vanilla",
