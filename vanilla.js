@@ -50,7 +50,7 @@ module.exports = {
     'space-infix-ops': 'error',
     'brace-style': ['error'],
     'space-in-parens': ['error'],
-    'check-file/filename-naming-convention': ['error', {'**/*.{jsx,tsx,js,ts}': 'KEBAB_CASE'}],
+    'check-file/filename-naming-convention': ['error', {'**/*.{jsx,tsx,js,ts}': 'KEBAB_CASE'}, {'ignoreMiddleExtensions': true}],
     'check-file/folder-naming-convention': ['error', {'**/': 'KEBAB_CASE'}],
   },
 };
