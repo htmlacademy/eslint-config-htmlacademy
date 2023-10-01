@@ -37,9 +37,7 @@ module.exports = {
     // ---------------------------------------------
     'arrow-parens': 'error',
     'eol-last': 'error',
-    'indent': ['error', 2, {
-      SwitchCase: 1,
-    }],
+    'indent': ['error', 'tab'],
     'lines-between-class-members': ['error', 'always', {'exceptAfterSingleLine': true}],
     'no-multi-spaces': 'error',
     'no-multiple-empty-lines': 'error',
