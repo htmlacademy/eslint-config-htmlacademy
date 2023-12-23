@@ -51,12 +51,12 @@
     "eslint": ">=7"
   },
   "devDependencies": {
-    "eslint": "8.48.0"
+    "eslint": "8.56.0"
   },
   "dependencies": {
     "eslint-plugin-check-file": "2.6.2",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-react": "^7.32.2",
-    "eslint-plugin-unicorn": "46.0.0"
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-react": "7.33.2",
+    "eslint-plugin-unicorn": "50.0.1"
   }
 }
