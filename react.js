@@ -1,19 +1,21 @@
-module.exports = {
-    extends: ['htmlacademy/vanilla', 'plugin:react/recommended'],
+import vanilla from './vanilla.js';
+import eslintReact from '@eslint-react/eslint-plugin';
+
+export default [
+  ...vanilla,
+  eslintReact.configs.recommended,
+  {
     rules: {
-        'react/no-array-index-key': 'error',
-        'react/no-access-state-in-setstate': 'error',
-        'react/no-unused-prop-types': ['error', {
-            skipShapeProps: true,
-        }],
-        'react/jsx-boolean-value': 'error',
-        'react/jsx-closing-bracket-location': ['error', 'tag-aligned'],
-        'react/jsx-closing-tag-location': 'error',
-        'react/jsx-curly-newline': ['error', {
-            multiline: 'consistent',
-            singleline: 'consistent'
-        }],
-        'react/jsx-no-useless-fragment': 'error',
-        'react/jsx-wrap-multilines': 'error',
-    }
-}
+      // --- React best practices ---
+      '@eslint-react/no-array-index-key': 'error',
+      '@eslint-react/no-access-state-in-setstate': 'error',
+      '@eslint-react/no-useless-fragment': 'error',
+
+      // --- JSX formatting (via @stylistic, already in plugins from vanilla) ---
+      '@stylistic/jsx-closing-bracket-location': ['error', 'tag-aligned'],
+      '@stylistic/jsx-closing-tag-location': 'error',
+      '@stylistic/jsx-curly-newline': ['error', {multiline: 'consistent', singleline: 'consistent'}],
+      '@stylistic/jsx-wrap-multilines': 'error',
+    },
+  },
+];

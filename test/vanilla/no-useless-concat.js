@@ -13,4 +13,4 @@ const fullMessage = 'It' +
   'will' +
   'make you happy!';
 
-throw new Error(discountMessage, fullPriceMessage, countAfterBuy, countAfterRefund, fullMessage);
+throw new Error (discountMessage, fullPriceMessage, countAfterBuy, countAfterRefund, fullMessage);

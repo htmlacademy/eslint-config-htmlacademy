@@ -1,9 +1,9 @@
 // Continuation, aka MemberExpression
-const promise = window.Promise.resolve(true);
+const promise = window.Promise.resolve (true);
 promise.
-  then((data) => data).
-  then((truthy) => !truthy).
-  catch(() => false);
+  then ((data) => data).
+  then ((truthy) => !truthy).
+  catch (() => false);
 
 // Function expression
 const calculateSum = function (sum, price) {
@@ -13,28 +13,28 @@ const calculateSum = function (sum, price) {
 // Function declaration
 function Constructor(name, price) {
   this.data = {
-    name: name,
-    price: price,
+    name,
+    price,
   };
 }
 
 // Calling site arguments
-const objectSample = new Constructor(
+const objectSample = new Constructor (
   'Petya',
   'Vasya',
 );
-objectSample.toString();
+objectSample.toString ();
 
-const result = calculateSum(
+const result = calculateSum (
   10000,
   1000,
 );
-result.toString();
+result.toString ();
 
 // Switch
 const symbol = 'a';
 
-switch(symbol) {
+switch (symbol) {
   case 'a':
     break;
   case 'b':

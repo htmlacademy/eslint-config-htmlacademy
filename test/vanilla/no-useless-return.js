@@ -14,21 +14,21 @@ function getFunction() {
 
 function doSomethingWithIf() {
   if (isTrue) {
-    doSomething();
+    doSomething ();
     return;
   } else {
-    doSomethingElse();
+    doSomethingElse ();
   }
-  doDefault();
+  doDefault ();
 }
 
 function doSomethingWithSwitch() {
   switch (isTrue) {
     case 1:
-      doSomething();
+      doSomething ();
       return;
     default:
-      doSomethingElse();
+      doSomethingElse ();
   }
 }
 
@@ -39,6 +39,7 @@ function doSomethingWithArray() {
       return number;
     }
   }
+  return undefined;
 }
 
-throw new Error(getNumberFive, getFunction, doSomethingWithIf, doSomethingWithSwitch, doSomethingWithArray);
+throw new Error (getNumberFive, getFunction, doSomethingWithIf, doSomethingWithSwitch, doSomethingWithArray);
