@@ -1,12 +1,6 @@
 node_modules/
-yarn.lock
-build/
 .DS_Store
 Thumbs.db
-.idea
+.idea/
 *.sublime*
-*.log
-*.psd
-*.ai
-*.pdf
-css/*.css
+.vscode/
