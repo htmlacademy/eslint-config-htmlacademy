@@ -1,56 +1,125 @@
-module.exports = {
-  extends: 'eslint:recommended',
-  plugins: [
-    'check-file'
-  ],
-  rules: {
-    // Possible Errors
-    // https://eslint.org/docs/rules/#possible-errors
-    // ---------------------------------------------
-    'no-template-curly-in-string': 'error',
-    'no-use-before-define': ['error', {'functions': false}],
-    // Suggestions
-    // https://eslint.org/docs/rules/#suggestions
-    // ---------------------------------------------
-    'accessor-pairs': 'error',
-    'arrow-body-style': ['error', 'as-needed'],
-    'camelcase': 'error',
-    'curly': 'error',
-    'eqeqeq': ['error', 'always'],
-    'no-alert': 'error',
-    'no-console': 'error',
-    'no-nested-ternary': 'error',
-    'no-return-assign': 'error',
-    'no-shadow': ['error', {'hoist': 'all'}],
-    'no-unneeded-ternary': 'error',
-    'no-unused-expressions': 'error',
-    'no-useless-concat': 'error',
-    'no-useless-return': 'error',
-    'no-var': 'error',
-    'prefer-arrow-callback': 'error',
-    'prefer-const': 'error',
-    'prefer-template': 'error',
-    'radix': 'error',
-    'strict': ['error', 'global'],
-    // Layout & Formatting
-    // https://eslint.org/docs/rules/#layout-formatting
-    // ---------------------------------------------
-    'arrow-parens': 'error',
-    'eol-last': 'error',
-    'indent': ['error', 2, {
-      SwitchCase: 1,
-    }],
-    'lines-between-class-members': ['error', 'always', {'exceptAfterSingleLine': true}],
-    'no-multi-spaces': 'error',
-    'no-multiple-empty-lines': 'error',
-    'no-trailing-spaces': 'error',
-    'quotes': ['error', 'single'],
-    'semi': 'error',
-    'semi-style': 'error',
-    'space-infix-ops': 'error',
-    'brace-style': ['error'],
-    'space-in-parens': ['error'],
-    'check-file/filename-naming-convention': ['error', {'**/*.{jsx,tsx,js,ts}': 'KEBAB_CASE'}, {'ignoreMiddleExtensions': true}],
-    'check-file/folder-naming-convention': ['error', {'**/': 'KEBAB_CASE'}],
+import js from '@eslint/js';
+import stylistic from '@stylistic/eslint-plugin';
+import checkFile from 'eslint-plugin-check-file';
+
+export default [
+  js.configs.recommended,
+  {
+    plugins: {
+      '@stylistic': stylistic,
+      'check-file': checkFile,
+    },
+    languageOptions: {
+      ecmaVersion: 2025,
+      sourceType: 'module',
+    },
+    rules: {
+      // --- Possible Errors ---
+      'no-template-curly-in-string': 'error',
+      'no-use-before-define': ['error', {functions: false}],
+
+      // --- Best Practices ---
+      'accessor-pairs': 'error',
+      'arrow-body-style': ['error', 'as-needed'],
+      'camelcase': 'error',
+      'consistent-return': 'error',
+      'curly': ['error', 'all'],
+      'eqeqeq': ['error', 'always'],
+      'guard-for-in': 'error',
+      'max-nested-callbacks': ['error', {max: 3}],
+      'no-alert': 'error',
+      'no-caller': 'error',
+      'no-console': 'error',
+      'no-eval': 'error',
+      'no-extend-native': 'error',
+      'no-extra-bind': 'error',
+      'no-implied-eval': 'error',
+      'no-invalid-this': 'error',
+      'no-iterator': 'error',
+      'no-labels': 'error',
+      'no-lone-blocks': 'error',
+      'no-multi-str': 'error',
+      'no-nested-ternary': 'error',
+      'no-new': 'error',
+      'no-new-func': 'error',
+      'no-new-wrappers': 'error',
+      'no-object-constructor': 'error',
+      'no-octal-escape': 'error',
+      'no-proto': 'error',
+      'no-return-assign': 'error',
+      'no-script-url': 'error',
+      'no-sequences': 'error',
+      'no-shadow': ['error', {hoist: 'all'}],
+      'no-throw-literal': 'error',
+      'no-unneeded-ternary': 'error',
+      'no-unused-expressions': 'error',
+      'no-useless-concat': 'error',
+      'no-useless-return': 'error',
+      'no-var': 'error',
+      'no-with': 'error',
+      'object-shorthand': ['error', 'always', {avoidQuotes: true}],
+      'prefer-arrow-callback': 'error',
+      'prefer-const': 'error',
+      'prefer-rest-params': 'error',
+      'prefer-spread': 'error',
+      'prefer-template': 'error',
+      'radix': 'error',
+      'strict': ['error', 'global'],
+      'yoda': ['error', 'never'],
+
+      // --- Variables ---
+      'no-label-var': 'error',
+      'no-shadow-restricted-names': 'error',
+      'no-undef-init': 'error',
+      'no-unused-vars': ['error', {args: 'after-used', argsIgnorePattern: '^_'}],
+      'one-var': ['error', {var: 'never', let: 'never', const: 'never'}],
+
+      // --- Conventions ---
+      'new-cap': 'error',
+      'no-array-constructor': 'error',
+      'quote-props': ['error', 'consistent'],
+      'unicode-bom': 'warn',
+
+      // --- File naming ---
+      'check-file/filename-naming-convention': ['error', {'**/*.{jsx,tsx,js,ts}': 'KEBAB_CASE'}, {ignoreMiddleExtensions: true}],
+      'check-file/folder-naming-convention': ['error', {'**/': 'KEBAB_CASE'}],
+
+      // --- @stylistic formatting ---
+      '@stylistic/arrow-parens': 'error',
+      '@stylistic/block-spacing': ['error', 'always'],
+      '@stylistic/brace-style': 'error',
+      '@stylistic/comma-dangle': ['error', 'always-multiline'],
+      '@stylistic/comma-spacing': 'error',
+      '@stylistic/comma-style': 'error',
+      '@stylistic/computed-property-spacing': 'error',
+      '@stylistic/eol-last': 'error',
+      '@stylistic/function-call-spacing': ['error', 'always'],
+      '@stylistic/generator-star-spacing': ['error', 'after'],
+      '@stylistic/indent': ['error', 2, {SwitchCase: 1}],
+      '@stylistic/key-spacing': 'error',
+      '@stylistic/keyword-spacing': 'error',
+      '@stylistic/lines-between-class-members': ['error', 'always', {exceptAfterSingleLine: true}],
+      '@stylistic/new-parens': 'error',
+      '@stylistic/no-extra-semi': 'error',
+      '@stylistic/no-floating-decimal': 'error',
+      '@stylistic/no-multi-spaces': 'error',
+      '@stylistic/no-multiple-empty-lines': ['error', {max: 2}],
+      '@stylistic/no-trailing-spaces': 'error',
+      '@stylistic/object-curly-spacing': 'error',
+      '@stylistic/padded-blocks': ['off', 'never'],
+      '@stylistic/quotes': ['error', 'single', {allowTemplateLiterals: 'always'}],
+      '@stylistic/rest-spread-spacing': 'error',
+      '@stylistic/semi': 'error',
+      '@stylistic/semi-spacing': 'error',
+      '@stylistic/semi-style': 'error',
+      '@stylistic/space-before-blocks': 'error',
+      '@stylistic/space-before-function-paren': ['error', {named: 'never', anonymous: 'always'}],
+      '@stylistic/space-in-parens': ['error', 'never'],
+      '@stylistic/space-infix-ops': 'error',
+      '@stylistic/space-unary-ops': ['error', {words: true, nonwords: false}],
+      '@stylistic/spaced-comment': ['error', 'always'],
+      '@stylistic/yield-star-spacing': ['error', 'after'],
+      '@stylistic/array-bracket-spacing': ['error', 'never'],
+    },
   },
-};
+];

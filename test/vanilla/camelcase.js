@@ -9,15 +9,17 @@ const objectSample = {
 
 const doSomething = () => {};
 
+function DoSomething() {}
+
 const value = objectSample.key;
 const instance = {
   value: objectSample.key,
 };
 
-objectSample.do_something();
-objectSample.doSomething();
-doSomething();
-new doSomething();
+objectSample.do_something ();
+objectSample.doSomething ();
+doSomething ();
+const doSomethingInstance = new DoSomething ();
 
 const categoryItem = {
   categoryId: '001',
@@ -43,4 +45,4 @@ const {isCategory: isCamelCased} = categoryItem;
 
 const {isCategory: isCamelCasedOther = true} = categoryItem;
 
-throw new Error(textColor, _textColor, textColor_, TEXT_COLOR, value, instance, categoryExample, doSomethingFirst, doSomethingSecond, doSomethingThird, isCamelCased, isCamelCasedOther, categoryId);
+throw new Error (textColor, _textColor, textColor_, TEXT_COLOR, value, instance, doSomethingInstance, categoryExample, doSomethingFirst, doSomethingSecond, doSomethingThird, isCamelCased, isCamelCasedOther, categoryId);

@@ -9,6 +9,6 @@ conditionLeft !== 1;
 conditionLeft === undefined;
 typeof undefinedVariable === 'undefined';
 'hello' !== 'world';
-0 === 0;
-true === true;
+conditionLeft === 0;
+conditionLeft === true;
 conditionLeft === null;

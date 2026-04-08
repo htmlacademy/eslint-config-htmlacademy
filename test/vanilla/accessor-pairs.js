@@ -9,13 +9,13 @@ const objectSample = {
 
 const objectSampleOther = {key: 1};
 
-Object.defineProperty(objectSampleOther, 'anythingString', {
-  set: function(value) {
+Object.defineProperty (objectSampleOther, 'anythingString', {
+  set(value) {
     this.valueThisObject = value;
   },
-  get: function() {
+  get() {
     return this.valueThisObject;
   },
 });
 
-throw new Error(objectSample);
+throw new Error (objectSample);
