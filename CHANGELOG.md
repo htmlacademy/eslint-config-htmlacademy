@@ -1,3 +1,28 @@
+# Changelog
+
+## 11.0.0
+
+### Breaking Changes
+
+- Requires ESLint >= 10 and Node.js >= 24
+- Flat config format only (`eslint.config.js`), legacy `.eslintrc` not supported
+- Removed ES5, ES5.5, ES6 configurations
+- Replaced `eslint-plugin-react` with `@eslint-react/eslint-plugin`
+
+### Changed
+
+- All formatting rules migrated to `@stylistic/eslint-plugin`
+- `func-call-spacing` set to `always` (matches codeguide: `foo ()`)
+- React configs rewritten with `@eslint-react` + `@stylistic` JSX formatting
+- `no-new-object` replaced with `no-object-constructor`
+
+### Added
+
+- `@eslint-react/eslint-plugin` for React linting
+- JSX formatting rules via `@stylistic` (`jsx-closing-bracket-location`, `jsx-closing-tag-location`, `jsx-curly-newline`, `jsx-wrap-multilines`)
+
+---
+
 10.0.1 / 2023-09-19
 ==================
 
