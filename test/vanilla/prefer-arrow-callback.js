@@ -1,10 +1,11 @@
-const doEnything = (fun) => fun ();
+// valid
+const doEnything = (fun) => fun();
 
 // arrow function callback
-doEnything (() => {});
+doEnything(() => {});
 
 // generator as callback
-doEnything (function* () {
+doEnything(function* () {
   yield;
 });
 
@@ -14,8 +15,8 @@ const doEnythingUsefull = function foo(value) {
 };
 
 // recursive named function callback
-doEnything (function doEnythingElse(value) {
-  return value && value + doEnythingElse (value - 1);
+doEnything(function doEnythingElse(value) {
+  return value && value + doEnythingElse(value - 1);
 });
 
 // Default: { allowNamedFunctions: false, allowUnboundThis: true }
@@ -23,23 +24,23 @@ doEnything (function doEnythingElse(value) {
 
 /* eslint-disable no-invalid-this */
 // unbound function expression callback
-doEnything (function () {
+doEnything(function () {
   return this.key;
 });
 
-doEnything (function () {
-  doEnything (this.key);
+doEnything(function () {
+  doEnything(this.key);
 });
 
-doEnything (function () {
-  (() => this) ();
+doEnything(function () {
+  (() => this)();
 });
 
 const someObject = {};
 
-[].map (function (item) {
-  return this.doSomething (item);
+[].map(function (item) {
+  return this.doSomething(item);
 }, someObject);
 /* eslint-enable no-invalid-this */
 
-throw new Error (doEnythingUsefull);
+throw new Error(doEnythingUsefull);

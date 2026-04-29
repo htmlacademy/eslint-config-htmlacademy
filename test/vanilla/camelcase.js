@@ -1,3 +1,4 @@
+// valid
 const textColor = '#112C85';
 const _textColor = '#112C85';
 const textColor_ = '#112C85';
@@ -16,10 +17,10 @@ const instance = {
   value: objectSample.key,
 };
 
-objectSample.do_something ();
-objectSample.doSomething ();
-doSomething ();
-const doSomethingInstance = new DoSomething ();
+objectSample.do_something();
+objectSample.doSomething();
+doSomething();
+const doSomethingInstance = new DoSomething();
 
 const categoryItem = {
   categoryId: '001',
@@ -45,4 +46,4 @@ const {isCategory: isCamelCased} = categoryItem;
 
 const {isCategory: isCamelCasedOther = true} = categoryItem;
 
-throw new Error (textColor, _textColor, textColor_, TEXT_COLOR, value, instance, doSomethingInstance, categoryExample, doSomethingFirst, doSomethingSecond, doSomethingThird, isCamelCased, isCamelCasedOther, categoryId);
+throw new Error(textColor, _textColor, textColor_, TEXT_COLOR, value, instance, doSomethingInstance, categoryExample, doSomethingFirst, doSomethingSecond, doSomethingThird, isCamelCased, isCamelCasedOther, categoryId);

@@ -1,3 +1,4 @@
+// valid
 const objectSample = {
   set key(value) {
     this.valueThisObject = value;
@@ -9,7 +10,7 @@ const objectSample = {
 
 const objectSampleOther = {key: 1};
 
-Object.defineProperty (objectSampleOther, 'anythingString', {
+Object.defineProperty(objectSampleOther, 'anythingString', {
   set(value) {
     this.valueThisObject = value;
   },
@@ -18,4 +19,4 @@ Object.defineProperty (objectSampleOther, 'anythingString', {
   },
 });
 
-throw new Error (objectSample);
+throw new Error(objectSample);

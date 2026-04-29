@@ -1,3 +1,4 @@
+// valid
 const fn1 = () => {};
 
 const fn2 = (anything) => anything;
@@ -11,16 +12,16 @@ const fn4 = (anything) => `${anything} \n`;
 
 const emptyString = '';
 
-emptyString.then ((anything) => {
+emptyString.then((anything) => {
   anything = `${anything}!`;
   return anything;
 });
 
-emptyString.then ((anything) => {
+emptyString.then((anything) => {
   if (typeof anything === 'string') {
     return anything;
   }
   return null;
 });
 
-throw new Error (fn1, fn2, fn3, fn4);
+throw new Error(fn1, fn2, fn3, fn4);
