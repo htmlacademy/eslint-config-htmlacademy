@@ -1,3 +1,4 @@
+// valid
 const isTrue = true;
 
 const doSomething = () => {};
@@ -14,21 +15,21 @@ function getFunction() {
 
 function doSomethingWithIf() {
   if (isTrue) {
-    doSomething ();
+    doSomething();
     return;
-  } else {
-    doSomethingElse ();
   }
-  doDefault ();
+  doSomethingElse();
+
+  doDefault();
 }
 
 function doSomethingWithSwitch() {
   switch (isTrue) {
     case 1:
-      doSomething ();
+      doSomething();
       return;
     default:
-      doSomethingElse ();
+      doSomethingElse();
   }
 }
 
@@ -42,4 +43,4 @@ function doSomethingWithArray() {
   return undefined;
 }
 
-throw new Error (getNumberFive, getFunction, doSomethingWithIf, doSomethingWithSwitch, doSomethingWithArray);
+throw new Error(getNumberFive, getFunction, doSomethingWithIf, doSomethingWithSwitch, doSomethingWithArray);

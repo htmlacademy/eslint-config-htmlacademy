@@ -1,3 +1,4 @@
+// valid
 const summandA = 1;
 const summandB = 2;
 const summandC = 3;
@@ -21,10 +22,10 @@ function someFunctionB(parameterA = 0) {
   return parameterA;
 }
 
-Math.floor (Math.random () * (summandC - summandA) + summandA);
-Math.floor (Math.random () * (summandC - summandA) + summandA);
+Math.floor(Math.random() * (summandC - summandA) + summandA);
+Math.floor(Math.random() * (summandC - summandA) + summandA);
 
-throw new Error (
+throw new Error(
   summandA,
   summandB,
   sumAFirst,

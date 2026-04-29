@@ -1,3 +1,4 @@
+// valid
 const price = 100;
 const discount = 50;
 const count = 5;
@@ -13,4 +14,4 @@ const fullMessage = 'It' +
   'will' +
   'make you happy!';
 
-throw new Error (discountMessage, fullPriceMessage, countAfterBuy, countAfterRefund, fullMessage);
+throw new Error(discountMessage, fullPriceMessage, countAfterBuy, countAfterRefund, fullMessage);

@@ -1,3 +1,4 @@
+// valid
 const isTrue = true;
 
 const doSomething = () => {};
@@ -10,11 +11,11 @@ if (isTrue) {
 }
 
 while (isTrue) {
-  doSomething (counter);
+  doSomething(counter);
 }
 
 if (isTrue) {
-  doSomething ();
+  doSomething();
 } else {
-  doSomethingElse ();
+  doSomethingElse();
 }
