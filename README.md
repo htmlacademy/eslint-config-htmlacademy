@@ -1,12 +1,10 @@
 # ESLint Config for HTML Academy Codeguide
 
 [![npm version](https://img.shields.io/npm/v/eslint-config-htmlacademy.svg)](https://www.npmjs.com/package/eslint-config-htmlacademy)
-[![CI](https://github.com/htmlacademy/eslint-config-htmlacademy/actions/workflows/ci.yml/badge.svg)](https://github.com/htmlacademy/eslint-config-htmlacademy/actions/workflows/ci.yml)
+[![test](https://github.com/htmlacademy/eslint-config-htmlacademy/actions/workflows/test.yml/badge.svg)](https://github.com/htmlacademy/eslint-config-htmlacademy/actions/workflows/test.yml)
 [![license](https://img.shields.io/npm/l/eslint-config-htmlacademy.svg)](https://github.com/htmlacademy/eslint-config-htmlacademy/blob/main/LICENSE)
 
-[ESLint](https://eslint.org) shareable configuration for JavaScript validation according to [HTML Academy Codeguide](https://codeguide.academy).
-
-Version 11 uses [flat config](https://eslint.org/docs/latest/use/configure/configuration-files) and is not compatible with `.eslintrc`.
+[ESLint](https://eslint.org) configuration for JavaScript and TypeScript validation according to [HTML Academy Codeguide](https://codeguide.academy).
 
 ## Requirements
 
@@ -19,81 +17,81 @@ Version 11 uses [flat config](https://eslint.org/docs/latest/use/configure/confi
 npm install -D eslint eslint-config-htmlacademy
 ```
 
-## Configurations
-
-| Name | Export | Description |
-| --- | --- | --- |
-| vanilla | `vanilla` | Browser JavaScript |
-| node | `node` | Node.js + TypeScript |
-| react | `react` | React |
-| react-typescript | `reactTypescript` | React + TypeScript |
-
-ES5 and ES6 configurations were removed in v11.
-
 ## Usage
 
-Create `eslint.config.js` in your project root.
-
-### Vanilla
+Create `eslint.config.js` in your project root and import the preset you need:
 
 ```js
-// eslint.config.js
-import {vanilla} from 'eslint-config-htmlacademy';
+import preset from 'eslint-config-htmlacademy/<preset-name>';
 
 export default [
-  ...vanilla,
+  ...preset,
+];
+```
+
+## Presets
+
+| Preset | Use case |
+| --- | --- |
+| `vanilla` | Plain JavaScript in the browser (widgets, vanilla apps) |
+| `typescript` | TypeScript in the browser without a framework |
+| `node` | Node.js (plain JavaScript) |
+| `node-typescript` | Node.js with TypeScript |
+| `react` | React, Vue or Angular without TypeScript |
+| `react-typescript` | React, Vue or Angular with TypeScript |
+
+TypeScript presets enable type-aware rules and require a valid `tsconfig.json`.
+
+## Key Features
+
+- **Modern style** — `foo()` (no space before paren), single quotes, trailing commas, mandatory braces; aligned with the industry standard and compatible with oxlint/oxfmt.
+- **Defensive set** — `eslint:recommended` plus ~20 rules from the JavaScript codeguide: error prevention, modern syntax (`prefer-object-has-own`, `logical-assignment-operators`), clean code (`no-else-return`, `no-implicit-coercion`).
+- **TypeScript** — `typescript-eslint` strict + stylistic type-checked sets. Enabled `consistent-type-imports` and `consistent-type-exports`. `any`-related rules report as warnings to allow gradual cleanup.
+- **Node.js** — `eslint-plugin-n` (with `no-process-env`, `no-sync`, `prefer-global/*`) and `eslint-plugin-unicorn` recommended set. Built-in objects must be imported explicitly (only `console` stays global).
+- **React / Vue / Angular** — `@eslint-react/eslint-plugin` v5, `eslint-plugin-jsx-a11y` for accessibility, expanded JSX formatting via `@stylistic/jsx-*`, `PASCAL_CASE` for component files.
+- **File naming** — `KEBAB_CASE` for source files; `PASCAL_CASE` for `*.{jsx,tsx,vue}` in React presets.
+
+## Extending
+
+Add your own configuration objects after the spread:
+
+```js
+import nodeTypescript from 'eslint-config-htmlacademy/node-typescript';
+
+export default [
+  ...nodeTypescript,
   {
-    // your overrides
+    files: ['scripts/**/*.ts'],
+    rules: {
+      'no-console': 'off',
+    },
   },
 ];
 ```
 
-### Node
+## Editor Integration
 
-For Node.js projects with TypeScript. Extends `vanilla` with `typescript-eslint`.
+Install the [ESLint extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) for VS Code.
+
+For auto-fix on save, add to `.vscode/settings.json`:
+
+```json
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  }
+}
+```
+
+## Known issues
+
+`eslint-plugin-jsx-a11y` (used in `react` and `react-typescript`) declares its `eslint` peer dependency as `^3 || ... || ^9` and has not yet advertised support for ESLint 10, although it works correctly. Until the upstream plugin is updated, install with `--legacy-peer-deps`:
 
 ```bash
-npm install -D typescript
+npm install -D eslint eslint-config-htmlacademy --legacy-peer-deps
 ```
 
-```js
-// eslint.config.js
-import {node} from 'eslint-config-htmlacademy';
-
-export default [
-  ...node,
-];
-```
-
-### React
-
-Extends `vanilla` with `@eslint-react/eslint-plugin`.
-
-```js
-// eslint.config.js
-import {react} from 'eslint-config-htmlacademy';
-
-export default [
-  ...react,
-];
-```
-
-### React + TypeScript
-
-Extends `react` with `typescript-eslint`.
-
-```bash
-npm install -D typescript
-```
-
-```js
-// eslint.config.js
-import {reactTypescript} from 'eslint-config-htmlacademy';
-
-export default [
-  ...reactTypescript,
-];
-```
+The other four presets (`vanilla`, `typescript`, `node`, `node-typescript`) install without the flag.
 
 ## Links
 

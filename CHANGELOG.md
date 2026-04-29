@@ -2,24 +2,37 @@
 
 ## 11.0.0
 
-### Breaking Changes
+Major rewrite. Migration to ESLint flat config, alignment with current industry style, and a redesigned set of six presets that split TypeScript-aware configurations from plain JavaScript ones.
 
-- Requires ESLint >= 10 and Node.js >= 24
-- Flat config format only (`eslint.config.js`), legacy `.eslintrc` not supported
-- Removed ES5, ES5.5, ES6 configurations
-- Replaced `eslint-plugin-react` with `@eslint-react/eslint-plugin`
+### Breaking changes
 
-### Changed
+- Requires ESLint >= 10 and Node.js >= 24.
+- Flat config only (`eslint.config.js`); legacy `.eslintrc` is no longer supported.
+- Removed `es5`, `es5.5`, `es6` presets — `vanilla` is the single base.
+- New preset architecture, exposed as subpath imports:
+  ```js
+  import preset from 'eslint-config-htmlacademy/<preset-name>';
+  ```
+  The previous `import {vanilla} from 'eslint-config-htmlacademy'` API is gone. Available presets: `vanilla`, `typescript`, `node`, `node-typescript`, `react`, `react-typescript`.
+- Adopted industry style: `function-call-spacing: 'never'` (`foo()`, not `foo ()`), backticks only for template literals with interpolation.
+- All formatting rules moved to `@stylistic/eslint-plugin`.
+- React: replaced `eslint-plugin-react` with `@eslint-react/eslint-plugin`.
 
-- All formatting rules migrated to `@stylistic/eslint-plugin`
-- `func-call-spacing` set to `always` (matches codeguide: `foo ()`)
-- React configs rewritten with `@eslint-react` + `@stylistic` JSX formatting
-- `no-new-object` replaced with `no-object-constructor`
+### Presets
 
-### Added
+- **`vanilla`** — plain browser JavaScript. Adds ~20 defensive and modern-syntax rules on top of `eslint:recommended`: `array-callback-return`, `no-promise-executor-return`, `no-implicit-coercion`, `no-else-return`, `prefer-object-has-own`, `prefer-object-spread`, `logical-assignment-operators`, and others. Browser globals are now provided automatically.
+- **`typescript`** (new) — browser TypeScript without a framework. Enables `tseslint.configs.strictTypeChecked` and `stylisticTypeChecked` (~150 type-aware rules). Uses `parserOptions.projectService: true` — auto-discovers TS projects, including monorepos. `any`-related rules (`no-unsafe-*`) are downgraded to `warn` for gradual cleanup. Inherited by `node-typescript` and `react-typescript`.
+- **`node`** / **`node-typescript`** — Node.js. Enables `unicorn/recommended` and Node-specific rules from `eslint-plugin-n` v17: `no-process-env`, `no-sync`, `no-new-require`, `prefer-global/*` policy "imports required" (with `console` as the only exception). `no-console` lowered to a warning, `unicorn/prefer-node-protocol` enforced.
+- **`react`** / **`react-typescript`** — React, Vue, Angular. Updated to `@eslint-react` v5 with its new flat-config preset structure. Added `eslint-plugin-jsx-a11y` (recommended set) covering the codeguide accessibility section (`alt`, `<label>`/`<input>` association, ARIA, button type, iframe sandbox, target=_blank). Expanded JSX formatting via `@stylistic/jsx-*`. Component file names enforced as `PASCAL_CASE`.
 
-- `@eslint-react/eslint-plugin` for React linting
-- JSX formatting rules via `@stylistic` (`jsx-closing-bracket-location`, `jsx-closing-tag-location`, `jsx-curly-newline`, `jsx-wrap-multilines`)
+### Dependencies
+
+- Added `globals`, `eslint-plugin-jsx-a11y`.
+- Updated `@eslint-react/eslint-plugin` to v5 (new flat-config preset structure).
+
+### Tests
+
+- Test runner rewritten on ESLint Node API + `node:test`. Each fixture declares `// expected: <rule>` (must fire) or `// valid` (must produce no errors).
 
 ---
 
