@@ -2,44 +2,63 @@
   "name": "eslint-config-htmlacademy",
   "version": "11.0.0",
   "description": "ESLint Config for HTML Academy CODEGUIDE",
-  "license": "MIT",
-  "engines": {
-    "node": ">=24"
-  },
-  "author": "HTML Academy <mail@htmlacademy.dev>",
-  "repository": "htmlacademy/eslint-config-htmlacademy",
   "keywords": [
-    "eslint",
-    "config",
-    "htmlacademy",
     "codeguide",
+    "config",
+    "eslint",
+    "htmlacademy",
     "linter"
   ],
-  "type": "module",
+  "license": "MIT",
+  "author": {
+    "name": "HTML Academy",
+    "email": "mail@htmlacademy.dev",
+    "url": "https://htmlacademy.ru"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/htmlacademy/eslint-config-htmlacademy.git"
+  },
   "files": [
-    "vanilla.js",
-    "node.js",
-    "react.js",
-    "react-typescript.js",
-    "index.js"
+    "vanilla.config.js",
+    "typescript.config.js",
+    "node.config.js",
+    "node-typescript.config.js",
+    "react.config.js",
+    "react-typescript.config.js"
   ],
+  "type": "module",
+  "exports": {
+    "./vanilla": "./vanilla.config.js",
+    "./typescript": "./typescript.config.js",
+    "./node": "./node.config.js",
+    "./node-typescript": "./node-typescript.config.js",
+    "./react": "./react.config.js",
+    "./react-typescript": "./react-typescript.config.js"
+  },
   "scripts": {
-    "test": "eslint --config test/vanilla/eslint.config.js test/vanilla/"
+    "test": "node test/run.js"
+  },
+  "dependencies": {
+    "@eslint-react/eslint-plugin": "^5.6.0",
+    "@eslint/js": "^10.0.1",
+    "@stylistic/eslint-plugin": "^5.10.0",
+    "eslint-plugin-check-file": "^3.3.1",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-n": "^17.24.0",
+    "eslint-plugin-unicorn": "^64.0.0",
+    "globals": "^17.5.0",
+    "typescript-eslint": "^8.59.1"
+  },
+  "devDependencies": {
+    "eslint": "^10.2.1",
+    "typescript": "^5.9.3"
   },
   "peerDependencies": {
     "eslint": ">=10",
     "typescript": ">=5"
   },
-  "dependencies": {
-    "@eslint/js": "^10.0.0",
-    "@eslint-react/eslint-plugin": "^4.2.0",
-    "@stylistic/eslint-plugin": "^5.10.0",
-    "eslint-plugin-check-file": "^3.3.0",
-    "eslint-plugin-n": "^17.24.0",
-    "eslint-plugin-unicorn": "^64.0.0",
-    "typescript-eslint": "^8.58.0"
-  },
-  "devDependencies": {
-    "eslint": "^10.2.0"
+  "engines": {
+    "node": ">=24"
   }
 }
