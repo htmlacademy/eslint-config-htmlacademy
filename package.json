@@ -40,18 +40,18 @@
     "test": "node test/run.js"
   },
   "dependencies": {
-    "@eslint-react/eslint-plugin": "^5.6.0",
+    "@eslint-react/eslint-plugin": "^5.8.1",
     "@eslint/js": "^10.0.1",
     "@stylistic/eslint-plugin": "^5.10.0",
     "eslint-plugin-check-file": "^3.3.1",
     "eslint-plugin-jsx-a11y": "^6.10.2",
-    "eslint-plugin-n": "^17.24.0",
+    "eslint-plugin-n": "^18.0.1",
     "eslint-plugin-unicorn": "^64.0.0",
-    "globals": "^17.5.0",
-    "typescript-eslint": "^8.59.1"
+    "globals": "^17.6.0",
+    "typescript-eslint": "^8.59.3"
   },
   "devDependencies": {
-    "eslint": "^10.2.1",
+    "eslint": "^10.4.0",
     "typescript": "^5.9.3"
   },
   "peerDependencies": {
