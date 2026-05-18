@@ -38,9 +38,15 @@ for (const preset of presets) {
   const eslint = new ESLint({overrideConfigFile: configFile});
 
   const fixtures = entries.filter((entry) => {
-    if (entry === 'eslint.config.js') return false;
-    if (entry === 'tsconfig.json') return false;
-    if (entry.startsWith('.')) return false;
+    if (entry === 'eslint.config.js') {
+      return false;
+    }
+    if (entry === 'tsconfig.json') {
+      return false;
+    }
+    if (entry.startsWith('.')) {
+      return false;
+    }
     return !statSync(join(dir, entry)).isDirectory();
   });
 
