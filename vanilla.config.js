@@ -16,14 +16,11 @@ export default [
       globals: {...globals.browser},
     },
     rules: {
-      // --- Possible Errors ---
       'array-callback-return': 'error',
       'no-promise-executor-return': 'error',
       'no-self-compare': 'error',
       'no-template-curly-in-string': 'error',
       'no-use-before-define': 'error',
-
-      // --- Best Practices ---
       'accessor-pairs': 'error',
       'arrow-body-style': ['error', 'as-needed'],
       'camelcase': 'error',
@@ -85,8 +82,6 @@ export default [
       'require-await': 'error',
       'strict': ['error', 'global'],
       'yoda': ['error', 'never'],
-
-      // --- Variables ---
       'no-label-var': 'error',
       'no-shadow-restricted-names': 'error',
       'no-undef-init': 'error',
@@ -98,18 +93,13 @@ export default [
         destructuredArrayIgnorePattern: '^_',
       }],
       'one-var': ['error', {var: 'never', let: 'never', const: 'never'}],
-
-      // --- Conventions ---
       'new-cap': 'error',
       'no-array-constructor': 'error',
       'quote-props': ['error', 'consistent'],
       'unicode-bom': 'error',
-
-      // --- File naming ---
       'check-file/filename-naming-convention': ['error', {'**/*.{js,ts}': 'KEBAB_CASE'}, {ignoreMiddleExtensions: true}],
       'check-file/folder-naming-convention': ['error', {'**/': 'KEBAB_CASE'}],
-
-      // --- @stylistic formatting ---
+      '@stylistic/array-bracket-spacing': ['error', 'never'],
       '@stylistic/arrow-parens': 'error',
       '@stylistic/block-spacing': ['error', 'always'],
       '@stylistic/brace-style': 'error',
@@ -143,7 +133,6 @@ export default [
       '@stylistic/space-unary-ops': ['error', {words: true, nonwords: false}],
       '@stylistic/spaced-comment': ['error', 'always'],
       '@stylistic/yield-star-spacing': ['error', 'after'],
-      '@stylistic/array-bracket-spacing': ['error', 'never'],
     },
   },
 ];

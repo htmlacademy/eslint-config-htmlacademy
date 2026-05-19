@@ -8,4 +8,13 @@ export default [
       'check-file/folder-naming-convention': 'off',
     },
   },
+  {
+    files: ['**/bad-component.jsx'],
+    rules: {
+      'check-file/filename-naming-convention': ['error', {
+        '**/*.{js,ts}': 'KEBAB_CASE',
+        '**/*.{jsx,tsx,vue}': 'PASCAL_CASE',
+      }, {ignoreMiddleExtensions: true}],
+    },
+  },
 ];

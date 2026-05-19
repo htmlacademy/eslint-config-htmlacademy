@@ -14,10 +14,7 @@ export default [
       globals: {...globals.node},
     },
     rules: {
-      // Override vanilla
       'no-console': ['warn', {allow: ['warn', 'error']}],
-
-      // Node rules
       ...nodePlugin.configs['flat/recommended-module'].rules,
       'n/handle-callback-err': ['error', '^.*(e|E)rr'],
       'n/no-callback-literal': 'error',
@@ -46,8 +43,6 @@ export default [
       'n/no-unpublished-import': 'off',
       'n/no-unsupported-features/es-builtins': 'off',
       'n/no-unsupported-features/node-builtins': 'off',
-
-      // Unicorn — overrides on top of recommended
       'unicorn/prevent-abbreviations': 'off',
       'unicorn/no-null': 'off',
       'unicorn/no-array-for-each': 'off',

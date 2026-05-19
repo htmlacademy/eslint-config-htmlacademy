@@ -37,6 +37,8 @@
     "./react-typescript": "./react-typescript.config.js"
   },
   "scripts": {
+    "lint": "eslint --config node.config.js '*.config.js' 'test/run.js' 'test/*/eslint.config.js'",
+    "pretest": "npm run lint",
     "test": "node test/run.js"
   },
   "dependencies": {

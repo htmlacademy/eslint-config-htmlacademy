@@ -9,7 +9,6 @@ export default [
   {
     files: ['**/*.{ts,tsx}'],
     rules: {
-      // --- React extras (not in @eslint-react/recommended-type-checked) ---
       '@eslint-react/jsx-no-useless-fragment': 'error',
       '@eslint-react/dom-no-missing-button-type': 'warn',
       '@eslint-react/dom-no-missing-iframe-sandbox': 'warn',
@@ -17,8 +16,6 @@ export default [
       '@eslint-react/no-misused-capture-owner-stack': 'error',
       '@eslint-react/no-unstable-context-value': 'warn',
       '@eslint-react/no-unstable-default-props': 'warn',
-
-      // --- JSX formatting (via @stylistic) ---
       '@stylistic/jsx-closing-bracket-location': ['error', 'tag-aligned'],
       '@stylistic/jsx-closing-tag-location': 'error',
       '@stylistic/jsx-curly-newline': ['error', {multiline: 'consistent', singleline: 'consistent'}],
@@ -30,14 +27,10 @@ export default [
       '@stylistic/jsx-pascal-case': 'error',
       '@stylistic/jsx-quotes': ['error', 'prefer-double'],
       '@stylistic/jsx-self-closing-comp': 'error',
-
-      // --- File naming for components ---
       'check-file/filename-naming-convention': ['error', {
         '**/*.{js,ts}': 'KEBAB_CASE',
         '**/*.{jsx,tsx,vue}': 'PASCAL_CASE',
       }, {ignoreMiddleExtensions: true}],
-
-      // --- TS-React extras ---
       '@typescript-eslint/no-useless-empty-export': 'warn',
     },
   },
