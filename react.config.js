@@ -1,6 +1,6 @@
 import vanilla from './vanilla.config.js';
 import eslintReact from '@eslint-react/eslint-plugin';
-import jsxA11y from 'eslint-plugin-jsx-a11y';
+import jsxA11y from '@htmlacademy/eslint-plugin-jsx-a11y';
 
 export default [
   ...vanilla,

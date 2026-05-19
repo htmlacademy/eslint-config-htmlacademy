@@ -83,16 +83,6 @@ For auto-fix on save, add to `.vscode/settings.json`:
 }
 ```
 
-## Known issues
-
-`eslint-plugin-jsx-a11y` (used in `react` and `react-typescript`) declares its `eslint` peer dependency as `^3 || ... || ^9` and has not yet advertised support for ESLint 10, although it works correctly. Until the upstream plugin is updated, install with `--legacy-peer-deps`:
-
-```bash
-npm install -D eslint eslint-config-htmlacademy --legacy-peer-deps
-```
-
-The other four presets (`vanilla`, `typescript`, `node`, `node-typescript`) install without the flag.
-
 ## Links
 
 - [HTML Academy](https://htmlacademy.ru)
