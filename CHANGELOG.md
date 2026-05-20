@@ -1,6 +1,6 @@
 # Changelog
 
-## 11.0.0
+## 11.0.0 — 2026-05-20
 
 Major rewrite. Migration to ESLint flat config, redesigned six-preset layout that splits TypeScript-aware configurations from plain JavaScript, and a much stricter rule set across the board.
 
