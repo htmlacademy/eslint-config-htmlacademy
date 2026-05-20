@@ -2,6 +2,7 @@ import typescript from './typescript.config.js';
 import nodePlugin from 'eslint-plugin-n';
 import unicorn from 'eslint-plugin-unicorn';
 import globals from 'globals';
+import {NODE_COMMON_RULES} from './shared.js';
 
 export default [
   ...typescript,
@@ -14,43 +15,9 @@ export default [
       globals: {...globals.node},
     },
     rules: {
-      'no-console': ['warn', {allow: ['warn', 'error']}],
       ...nodePlugin.configs['flat/recommended-module'].rules,
-      'n/handle-callback-err': ['error', '^.*(e|E)rr'],
-      'n/no-callback-literal': 'error',
-      'n/no-path-concat': 'error',
-      'n/no-process-exit': 'error',
-      'n/callback-return': 'error',
+      ...NODE_COMMON_RULES,
       'n/file-extension-in-import': ['error', 'never'],
-      'n/global-require': 'error',
-      'n/no-mixed-requires': 'error',
-      'n/prefer-global/buffer': ['error', 'never'],
-      'n/prefer-global/console': ['error', 'always'],
-      'n/prefer-global/crypto': ['error', 'never'],
-      'n/prefer-global/process': ['error', 'never'],
-      'n/prefer-global/text-decoder': ['error', 'never'],
-      'n/prefer-global/text-encoder': ['error', 'never'],
-      'n/prefer-global/timers': ['error', 'never'],
-      'n/prefer-global/url': ['error', 'never'],
-      'n/prefer-global/url-search-params': ['error', 'never'],
-      'n/prefer-promises/dns': 'error',
-      'n/prefer-promises/fs': 'error',
-      'n/no-process-env': ['warn', {allowedVariables: ['NODE_ENV']}],
-      'n/no-sync': 'error',
-      'n/no-new-require': 'error',
-      'n/no-hide-core-modules': 'error',
-      'n/no-missing-import': 'off',
-      'n/no-unpublished-import': 'off',
-      'n/no-unsupported-features/es-builtins': 'off',
-      'n/no-unsupported-features/node-builtins': 'off',
-      'unicorn/prevent-abbreviations': 'off',
-      'unicorn/no-null': 'off',
-      'unicorn/no-array-for-each': 'off',
-      'unicorn/consistent-function-scoping': 'off',
-      'unicorn/expiring-todo-comments': 'off',
-      'unicorn/filename-case': 'off',
-      'unicorn/numeric-separators-style': 'off',
-      'unicorn/prefer-node-protocol': 'error',
     },
   },
 ];
