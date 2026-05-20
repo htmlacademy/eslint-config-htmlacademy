@@ -44,12 +44,64 @@ TypeScript presets enable type-aware rules and require a valid `tsconfig.json`.
 
 ## Key Features
 
-- **Modern style** — `foo()` (no space before paren), single quotes, trailing commas, mandatory braces; aligned with the industry standard and compatible with oxlint/oxfmt.
-- **Defensive set** — `eslint:recommended` plus ~20 rules from the JavaScript codeguide: error prevention, modern syntax (`prefer-object-has-own`, `logical-assignment-operators`), clean code (`no-else-return`, `no-implicit-coercion`).
-- **TypeScript** — `typescript-eslint` strict + stylistic type-checked sets. Enabled `consistent-type-imports` and `consistent-type-exports`. `any`-related rules report as warnings to allow gradual cleanup.
-- **Node.js** — `eslint-plugin-n` (with `no-process-env`, `no-sync`, `prefer-global/*`) and `eslint-plugin-unicorn` recommended set. Built-in objects must be imported explicitly (only `console` stays global).
-- **React / Vue / Angular** — `@eslint-react/eslint-plugin` v5, `eslint-plugin-jsx-a11y` for accessibility, expanded JSX formatting via `@stylistic/jsx-*`, `PASCAL_CASE` for component files.
-- **File naming** — `KEBAB_CASE` for source files; `PASCAL_CASE` for `*.{jsx,tsx,vue}` in React presets.
+- **Modern style** — single quotes, trailing comma required in multiline literals, `function-call-spacing: 'never'` (`foo()`, not `foo ()`), mandatory braces (`curly: 'all'`), 2-space indent. Backticks reserved for template literals with interpolation.
+- **Defensive set** — `eslint:recommended` extended with the codeguide ruleset: error prevention (`array-callback-return`, `no-promise-executor-return`, `require-await`, `no-self-compare`, `no-implicit-coercion`, `no-template-curly-in-string`, `no-throw-literal`, `default-param-last`), variable hygiene (`no-use-before-define`, `no-shadow` with hoisting, `no-undef-init`), discipline (`no-alert`, `no-console`, `no-eval`, `no-iterator`, `no-labels`, `no-with`).
+- **Modern syntax** — `prefer-const`, `no-var`, `prefer-template`, `prefer-arrow-callback`, `object-shorthand`, `prefer-rest-params`, `prefer-spread`, `prefer-object-has-own`, `prefer-object-spread`, `logical-assignment-operators`.
+- **Readability** — `no-else-return`, `no-nested-ternary`, `no-unneeded-ternary`, `max-nested-callbacks: 3`, `one-var: 'never'`, `consistent-return`, `dot-notation`, `yoda: 'never'`.
+- **TypeScript** — `typescript-eslint` `strictTypeChecked` + `stylisticTypeChecked` sets (~150 type-aware rules). `consistent-type-imports` and `consistent-type-exports` enforced. `no-unsafe-*` reports as a warning for gradual `any` cleanup. `parserOptions.projectService: true` auto-discovers `tsconfig.json`, monorepo-friendly.
+- **Node.js** — `eslint-plugin-n` v18 + `eslint-plugin-unicorn` recommended. Built-in objects must be imported (`import process from 'node:process'`); only `console` stays global. `n/no-sync: error`, `n/no-process-env: warn` (`NODE_ENV` allowed), `unicorn/prefer-node-protocol: error`.
+- **React / Vue / Angular** — `@eslint-react/eslint-plugin` v5 + `eslint-plugin-jsx-a11y` recommended set: `alt-text`, `label-has-associated-control`, `anchor-is-valid`, `role-has-required-aria-props`, `iframe-has-title`, `no-noninteractive-element-interactions`, ARIA validators. Plus `dom-no-missing-button-type`, `dom-no-missing-iframe-sandbox`, `dom-no-unsafe-target-blank`, `no-unstable-context-value`, `no-unstable-default-props`. Full `@stylistic/jsx-*` formatting.
+- **File naming** — `KEBAB_CASE` for `*.{js,ts}`; `PASCAL_CASE` for `*.{jsx,tsx,vue}` in React presets.
+
+## File Naming
+
+Source filenames must match the case convention enforced by `check-file`:
+
+```text
+src/utils/format-date.js          /* Valid: KEBAB_CASE */
+src/components/Button.jsx         /* Valid: PASCAL_CASE for components */
+src/components/Button.vue         /* Valid: PASCAL_CASE for components */
+
+src/utils/formatDate.js           /* Invalid: camelCase */
+src/components/button.jsx         /* Invalid: kebab-case for component */
+```
+
+## Quoting
+
+Single quotes everywhere; double quotes only to avoid escaping:
+
+```js
+const message = 'hello';                  /* Valid */
+const sentence = "It's working";          /* Valid: avoidEscape */
+const greeting = `hello, ${name}`;        /* Valid: interpolation */
+
+const title = "double quotes";            /* Invalid: prefer single */
+const literal = `static string`;          /* Invalid: backticks without ${} */
+```
+
+In JSX attributes — double quotes:
+
+```jsx
+<button type="button" className="primary">Send</button>
+```
+
+## Imports in Node.js
+
+Built-ins must come with the `node:` protocol; globals from `node:buffer`, `node:process`, etc., must be imported explicitly:
+
+```js
+/* Valid */
+import {readFile} from 'node:fs/promises';
+import process from 'node:process';
+import {Buffer} from 'node:buffer';
+
+/* Invalid */
+import {readFile} from 'fs/promises';     /* missing node: */
+const cwd = process.cwd();                /* `process` not imported */
+const buf = Buffer.from('hi');            /* `Buffer` not imported */
+```
+
+`console` is the only built-in still available as a global.
 
 ## Extending
 
