@@ -1,11 +1,15 @@
 import vanilla from './vanilla.config.js';
 import tseslint from 'typescript-eslint';
+import {UNUSED_VARS_OPTIONS} from './shared.js';
 
 export default [
   ...vanilla,
-  ...tseslint.configs.strictTypeChecked,
-  ...tseslint.configs.stylisticTypeChecked,
-  {
+  ...tseslint.config({
+    files: ['**/*.{ts,tsx,mts,cts}'],
+    extends: [
+      ...tseslint.configs.strictTypeChecked,
+      ...tseslint.configs.stylisticTypeChecked,
+    ],
     languageOptions: {
       parser: tseslint.parser,
       parserOptions: {
@@ -16,13 +20,7 @@ export default [
       'no-shadow': 'off',
       'no-unused-vars': 'off',
       '@typescript-eslint/no-shadow': ['error', {hoist: 'all'}],
-      '@typescript-eslint/no-unused-vars': ['error', {
-        args: 'after-used',
-        argsIgnorePattern: '^_',
-        varsIgnorePattern: '^_',
-        caughtErrorsIgnorePattern: '^_',
-        destructuredArrayIgnorePattern: '^_',
-      }],
+      '@typescript-eslint/no-unused-vars': ['error', UNUSED_VARS_OPTIONS],
       '@typescript-eslint/consistent-type-imports': 'error',
       '@typescript-eslint/consistent-type-exports': 'error',
       '@typescript-eslint/no-unsafe-call': 'warn',
@@ -32,5 +30,5 @@ export default [
       '@typescript-eslint/no-unsafe-argument': 'warn',
       'new-cap': ['error', {capIsNew: false}],
     },
-  },
+  }),
 ];

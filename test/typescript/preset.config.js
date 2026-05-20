@@ -1,0 +1,18 @@
+import typescript from '../../typescript.config.js';
+
+export default [
+  ...typescript,
+  {
+    rules: {
+      'no-unused-expressions': 'off',
+      'check-file/filename-naming-convention': 'off',
+      'check-file/folder-naming-convention': 'off',
+    },
+  },
+  {
+    files: ['**/BadFileName.ts'],
+    rules: {
+      'check-file/filename-naming-convention': ['error', {'**/*.{js,ts}': 'KEBAB_CASE'}, {ignoreMiddleExtensions: true}],
+    },
+  },
+];
